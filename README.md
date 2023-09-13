@@ -24,4 +24,5 @@ The accession numbers of RNA-seq runs are in the following table. Technical repl
 ## Files in this repository
 * [<code>contaminants2trimm.fa</code>](/contaminants2trimm.fa) contains a collection of Illumina adapters; it is used in the trimming step.
 * [<code>pipeline.sh</code>](/pipeline.sh) contains all the commands used to run the analysis.
-* [<code>readsToDownload.ls</code>](/readsToDownload.ls) contains the list of accession numbers of RNA-seq experiments that have been used for the analysis.
+* [<code>readsToDownload.ls</code>](/readsToDownload.ls) contains the list of accession numbers of RNA-seq experiments that have been used for the analysis; it is used to download all the sra files from NCBI.
+* [<code>readsToDownload.tsv</code>](/readsToDownload.tsv) contains a parsable version of metadata of each RNA-seq run.
