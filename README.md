@@ -2,7 +2,7 @@
 Here you can find the pipeline of the differential-expression analysis on *Ruditapes philippinarum*. RNA-seq experiments come from gonads of females belonging to sex-biased families.
 
 The original publication that produced the data is:
-> Ghiselli, F., Milani, L., Chang, P. L., Hedgecock, D., Davis, J. P., Nuzhdin, S. V., & Passamonti, M. (2012). De novo assembly of the Manila clam *Ruditapes philippinarum* transcriptome provides new insights into expression bias, mitochondrial doubly uniparental inheritance and sex determination. *Molecular biology and evolution*, *29*(2), 771-786. doi: https://doi.org/10.1093/molbev/msr248
+> Ghiselli, F., Milani, L., Chang, P. L., Hedgecock, D., Davis, J. P., Nuzhdin, S. V., & Passamonti, M. (2012). **De novo assembly of the Manila clam *Ruditapes philippinarum* transcriptome provides new insights into expression bias, mitochondrial doubly uniparental inheritance and sex determination**. *Molecular biology and evolution*, *29*(2), 771-786. doi: https://doi.org/10.1093/molbev/msr248
 
 The accession numbers of RNA-seq runs are in the following table. Technical replicates are grouped in each line.
 
