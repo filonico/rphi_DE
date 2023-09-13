@@ -4,7 +4,7 @@ Here you can find the pipeline of the differential-expression analysis on *Rudit
 The original publication that produced the data is:
 > Ghiselli, F., Milani, L., Chang, P. L., Hedgecock, D., Davis, J. P., Nuzhdin, S. V., & Passamonti, M. (2012). De novo assembly of the Manila clam *Ruditapes philippinarum* transcriptome provides new insights into expression bias, mitochondrial doubly uniparental inheritance and sex determination. *Molecular biology and evolution*, *29*(2), 771-786. doi: https://doi.org/10.1093/molbev/msr248
 
-The accession numbers of RNA-seq runs are in the following table. Technical replicates are grouped in each line. Run accession numbers can be also accessed in [<code>readsToDownload.ls</code>](/readsToDownload.ls), which is useful to download the data altogether as in [<code>pipeline.sh</code>](/pipeline.sh).
+The accession numbers of RNA-seq runs are in the following table. Technical replicates are grouped in each line.
 
 | Run | Sex | Family |
 | --- | --- | --- |
@@ -20,3 +20,8 @@ The accession numbers of RNA-seq runs are in the following table. Technical repl
 | [SRR280842](https://trace.ncbi.nlm.nih.gov/Traces/?view=run_browser&acc=SRR280842&display=metadata) + [SRR280910](https://trace.ncbi.nlm.nih.gov/Traces/?view=run_browser&acc=SRR280910&display=metadata) | male | female-biased |
 | [SRR280911](https://trace.ncbi.nlm.nih.gov/Traces/?view=run_browser&acc=SRR280911&display=metadata) + [SRR280912](https://trace.ncbi.nlm.nih.gov/Traces/?view=run_browser&acc=SRR280912&display=metadata) | male | female-biased |
 | [SRR280913](https://trace.ncbi.nlm.nih.gov/Traces/?view=run_browser&acc=SRR280913&display=metadata) + [SRR280914](https://trace.ncbi.nlm.nih.gov/Traces/?view=run_browser&acc=SRR280914&display=metadata) | male | female-biased |
+
+## Files in this repository
+* [<code>contaminants2trimm.fa</code>](/contaminants2trimm.fa) contains a collection of Illumina adapters; it is used in the trimming step.
+* [<code>pipeline.sh</code>](/pipeline.sh) contains all the commands used to run the analysis.
+* [<code>readsToDownload.ls</code>](/readsToDownload.ls) contains the list of accession numbers of RNA-seq experiments that have been used for the analysis.
