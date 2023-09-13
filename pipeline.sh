@@ -9,9 +9,12 @@ mkdir -p 01_rawreads/01_fastqc
 
 # put the readsToDownload.ls file inside the newly created directory
 # download the .sra files
-prefetch --option-file 01_rawreads/readsToDownaload.ls -O 01_rawreads/ &
+prefetch --option-file 01_rawreads/readsToDownload.ls -O 01_rawreads/ &
 
-for i in 01_rawreads/SRR28*/*sra; do
+# if the previous doesn't work, try the following
+# while read j; do prefetch $j -O 01_rawreads/; done <01_rawreads/readsToDownload.ls
+
+for i in 01_rawreads/SRR28*/*sra*; do
 
     DIR="${i%/*}"
 
@@ -30,7 +33,7 @@ for i in 01_rawreads/SRR28*/*sra; do
 done
 
 # aggregate fastqc report into a single html file
-multiqc -f -o 01_rawreads/01_fastqc/ 01_rawreads/01_fastqc/
+multiqc -o 01_rawreads/01_fastqc/ 01_rawreads/01_fastqc/
 
 ######################
 ##### TRIM READS #####
@@ -51,9 +54,9 @@ for i in 01_rawreads/SRR*; do
     "$i"/"$ACC"_1.fastq.gz "$i"/"$ACC"_2.fastq.gz \
     "$TRIMDIR"/"$ACC"_1_paired.fastq.gz "$TRIMDIR"/"$ACC"_1_unpaired.fastq.gz \
     "$TRIMDIR"/"$ACC"_2_paired.fastq.gz "$TRIMDIR"/"$ACC"_2_unpaired.fastq.gz \
-    ILLUMINACLIP:contaminants2trimm.fa:2:30:10 LEADING:5 TRAILING:5 SLIDINGWINDOW:4:15 MINLEN:75 &&
+    ILLUMINACLIP:contaminants2trimm.fa:2:30:10 LEADING:5 TRAILING:5 SLIDINGWINDOW:4:15 MINLEN:65 &&
     
     # execute quality check
-        fastqc "$TRIMDIR"/*_paired*gz -o 02_trimmed_reads/01_fastqc -f fastq
+    fastqc "$TRIMDIR"/*_paired*gz -o 02_trimmed_reads/01_fastqc -f fastq
     
 done
