@@ -1,8 +1,10 @@
 #!/bin/bash
 
+
 ##########################
 ##### DOWNLOAD READS #####
 ##########################
+
 
 # create a directory to store raw reads and quality control results
 mkdir -p 01_rawreads/01_fastqc
@@ -35,9 +37,11 @@ done
 # aggregate fastqc report into a single html file
 multiqc -o 01_rawreads/01_fastqc/ 01_rawreads/01_fastqc/
 
+
 ######################
 ##### TRIM READS #####
 ######################
+
 
 # create a directory to store trimmed reads and quality control results
 mkdir -p 02_trimmed_reads/01_fastqc
