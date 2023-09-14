@@ -55,7 +55,7 @@ for i in 01_rawreads/SRR*; do
     
     # trim reads
     trimmomatic PE -threads 15 -phred33 \
-    "$i"/"$ACC"_1.fastq.gz "$i"/"$ACC"_2.fastq.gz \
+    "$i"/"$ACC"*1.fastq.gz "$i"/"$ACC"*2.fastq.gz \
     "$TRIMDIR"/"$ACC"_1_paired.fastq.gz "$TRIMDIR"/"$ACC"_1_unpaired.fastq.gz \
     "$TRIMDIR"/"$ACC"_2_paired.fastq.gz "$TRIMDIR"/"$ACC"_2_unpaired.fastq.gz \
     ILLUMINACLIP:contaminants2trimm.fa:2:30:10 LEADING:5 TRAILING:5 SLIDINGWINDOW:4:15 MINLEN:65 &&
