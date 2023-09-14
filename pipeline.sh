@@ -50,7 +50,7 @@ mkdir -p 02_trimmed_reads/01_fastqc
 
 for i in 01_rawreads/SRR*; do
     
-    ACC="${i##*/}" &&
+    ACC="${i#*/}" &&
     TRIMDIR="02_trimmed_reads/"$ACC"_trimmed" &&
     
     mkdir "$TRIMDIR" &&
@@ -75,4 +75,28 @@ multiqc -o 01_rawreads/01_fastqc/ 01_rawreads/01_fastqc/
 ##### READ MAPPING #####
 ########################
 
+# create a directory to store mapping results and indexed transcriptome
+mkdir -p 03_mappings/01_rphi_transcriptome
 
+# move the reference transcriptome in the newly created directory
+mv Rphi.cds.fna 03_mappings/01_rphi_transcriptome
+
+# index transcriptome
+bowtie2-build 03_mappings/01_rphi_transcriptome/Rphi.cds.fna 03_mappings/01_rphi_transcriptome/Rphi.cds.fna
+
+for i in 02_trimmed_reads/SRR*; do
+
+    tmp="${i#*/}" && ACC="${tmp%_*}" &&
+
+    bowtie2 -x 03_mappings/01_rphi_transcriptome/Rphi.cds.fna \
+    -1 "$i"/"$ACC"_1_paired.fastq.gz -2 "$i"/"$ACC"_2_paired.fastq.gz \
+    -S 03_mappings/"$ACC".mapped.bt2.sam --no-discordant -p 30 \
+    2> 03_mappings/"$ACC".mapped.bt2.log &&
+    
+    samtools view -b 03_mappings/"$ACC".mapped.bt2.sam > 03_mappings/"$ACC".mapped.bt2.bam &&
+    
+    rm 03_mappings/"$ACC".mapped.bt2.sam &&
+
+    echo "$ACC": OK
+    
+done
