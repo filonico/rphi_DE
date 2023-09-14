@@ -1,15 +1,17 @@
 #!/bin/bash
 
 
-##########################
-##### DOWNLOAD READS #####
-##########################
+#########################
+##### READ DOWNLOAD #####
+#########################
 
 
 # create a directory to store raw reads and quality control results
 mkdir -p 01_rawreads/01_fastqc
 
-# put the readsToDownload.ls file inside the newly created directory
+# move readsToDownload.ls in the newly created directory
+mv readsToDownload.ls 01_rawreads/
+
 # download the .sra files
 prefetch --option-file 01_rawreads/readsToDownload.ls -O 01_rawreads/ &
 
@@ -38,9 +40,9 @@ done
 multiqc -o 01_rawreads/01_fastqc/ 01_rawreads/01_fastqc/
 
 
-######################
-##### TRIM READS #####
-######################
+#########################
+##### READ TRIMMING #####
+#########################
 
 
 # create a directory to store trimmed reads and quality control results
@@ -64,3 +66,13 @@ for i in 01_rawreads/SRR*; do
     fastqc "$TRIMDIR"/*_paired*gz -o 02_trimmed_reads/01_fastqc -f fastq
     
 done
+
+# aggregate fastqc report into a single html file
+multiqc -o 01_rawreads/01_fastqc/ 01_rawreads/01_fastqc/
+
+
+########################
+##### READ MAPPING #####
+########################
+
+

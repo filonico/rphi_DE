@@ -1,8 +1,11 @@
 # README
 Here you can find the pipeline of the differential-expression analysis on *Ruditapes philippinarum*. RNA-seq experiments come from gonads of females belonging to sex-biased families.
 
-The original publication that produced the data is:
-> Ghiselli, F., Milani, L., Chang, P. L., Hedgecock, D., Davis, J. P., Nuzhdin, S. V., & Passamonti, M. (2012). **De novo assembly of the Manila clam *Ruditapes philippinarum* transcriptome provides new insights into expression bias, mitochondrial doubly uniparental inheritance and sex determination**. *Molecular biology and evolution*, *29*(2), 771-786. doi: https://doi.org/10.1093/molbev/msr248
+The publication that produced RNA-seq data is:
+> Ghiselli, F., Milani, L., Chang, P. L., Hedgecock, D., Davis, J. P., Nuzhdin, S. V., & Passamonti, M. (2012). **De novo assembly of the Manila clam *Ruditapes philippinarum* transcriptome provides new insights into expression bias, mitochondrial doubly uniparental inheritance and sex determination**. *Molecular Biology and Evolution*, *29*(2), 771-786. doi: https://doi.org/10.1093/molbev/msr248
+
+The publication that produced the reference predicted transcriptome to which reads were mapped is:
+> Xu, R., Martelossi, J., Smits, M., Iannello, M., Peruzza, L., Babbucci, M., ... & Ghiselli, F. (2022). **Multi-tissue RNA-Seq analysis and long-read-based genome assembly reveal complex sex-specific gene regulation and molecular evolution in the Manila clam**. *Genome Biology and Evolution*, *14*(12), evac171. doi: https://doi.org/10.1093/gbe/evac171
 
 The accession numbers of RNA-seq runs are in the following table. Technical replicates are grouped in each line.
 
@@ -26,3 +29,4 @@ The accession numbers of RNA-seq runs are in the following table. Technical repl
 * [<code>pipeline.sh</code>](/pipeline.sh) contains all the commands used to run the analysis.
 * [<code>readsToDownload.ls</code>](/readsToDownload.ls) contains the list of accession numbers of RNA-seq experiments that have been used for the analysis; it is used to download all the sra files from NCBI.
 * [<code>readsToDownload.tsv</code>](/readsToDownload.tsv) contains a parsable version of metadata of each RNA-seq run.
+* [<code>Rphi.cds.gna</code>](/Rphi.cds.fna) contains the transcriptome to which reads were mapped.
