@@ -25,9 +25,9 @@ The accession numbers of RNA-seq runs are in the following table. Technical repl
 | [SRR280913](https://trace.ncbi.nlm.nih.gov/Traces/?view=run_browser&acc=SRR280913&display=metadata) + [SRR280914](https://trace.ncbi.nlm.nih.gov/Traces/?view=run_browser&acc=SRR280914&display=metadata) | male | female-biased |
 
 ## Files in this repository
-* [<code>/00_input_files/contaminants2trimm.fa</code>](/00_input_files/contaminants2trimm.fa) contains a collection of Illumina adapters; it is used in the trimming step.
-* [<code>/00_input_files/pipeline.sh</code>](/00_input_files/pipeline.sh) contains all the commands used to run the analysis.
-* [<code>/00_input_files/readsToDownload.ls</code>](/00_input_files/readsToDownload.ls) contains the list of accession numbers of RNA-seq experiments that have been used for the analysis; it is used to download all the sra files from NCBI.
-* [<code>/00_input_files/readsToDownload.tsv</code>](/00_input_files/readsToDownload.tsv) contains a parsable version of metadata of each RNA-seq run.
-* [<code>/00_input_files/Rphi.cds.gna</code>](/00_input_files/Rphi.cds.fna) contains the transcriptome to which reads were mapped.
-* [<code>/00_input_files/Rphi.cds.eggnog.Ann.tsv</code>](/00_input_files/Rphi.cds.eggnogAnn.tsv) contains the GO annotation used for the GO enrichment analysis; the file was produced via the [eggNOG-mapper](http://eggnog-mapper.embl.de/) online tool (accessed on Sept 9, 2023).
+* [<code>00_input_files/contaminants2trimm.fa</code>](00_input_files/contaminants2trimm.fa) contains a collection of Illumina adapters; it is used in the trimming step.
+* [<code>00_input_files/pipeline.sh</code>](00_input_files/pipeline.sh) contains all the commands used to run the analysis.
+* [<code>00_input_files/readsToDownload.ls</code>](00_input_files/readsToDownload.ls) contains the list of accession numbers of RNA-seq experiments that have been used for the analysis; it is used to download all the sra files from NCBI.
+* [<code>00_input_files/readsToDownload.tsv</code>](00_input_files/readsToDownload.tsv) contains a parsable version of metadata of each RNA-seq run.
+* [<code>00_input_files/Rphi.cds.gna</code>](00_input_files/Rphi.cds.fna) contains the transcriptome to which reads were mapped.
+* [<code>00_input_files/Rphi.cds.eggnog.Ann.tsv</code>](00_input_files/Rphi.cds.eggnogAnn.tsv) contains the GO annotation used for the GO enrichment analysis; the file was produced via the [eggNOG-mapper](http://eggnog-mapper.embl.de/) online tool (accessed on Sept 9, 2023).
