@@ -7,18 +7,18 @@
 
 
 # create a directory to store raw reads and quality control results
-mkdir -p 01_rawreads/01_fastqc
+mkdir -p 01_raw_reads/01_fastqc
 
-# move readsToDownload.ls in the newly created directory
-mv readsToDownload.ls 01_rawreads/
+# copy readsToDownload.ls in the newly created directory
+cp 00_input_files/readsToDownload.ls 01_raw_reads/
 
 # download the .sra files
-prefetch --option-file 01_rawreads/readsToDownload.ls -O 01_rawreads/ &
+prefetch --option-file 01_raw_reads/readsToDownload.ls -O 01_raw_reads/ &
 
 # if the previous doesn't work, try the following
-# while read j; do prefetch $j -O 01_rawreads/; done <01_rawreads/readsToDownload.ls
+# while read j; do prefetch $j -O 01_raw_reads/; done <01_raw_reads/readsToDownload.ls
 
-for i in 01_rawreads/SRR28*/*sra*; do
+for i in 01_raw_reads/SRR28*/*sra*; do
 
     DIR="${i%/*}"
 
@@ -26,7 +26,7 @@ for i in 01_rawreads/SRR28*/*sra*; do
     fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files "$i" -O $DIR &&
     
     # execute quality check
-    fastqc "$DIR"/*fastq -o 01_rawreads/01_fastqc -f fastq &&
+    fastqc "$DIR"/*fastq -o 01_raw_reads/01_fastqc -f fastq &&
 
     # gzip fastq files
     gzip -9 "$DIR"/*fastq &&
@@ -37,7 +37,7 @@ for i in 01_rawreads/SRR28*/*sra*; do
 done
 
 # aggregate fastqc report into a single html file
-multiqc -o 01_rawreads/01_fastqc/ 01_rawreads/01_fastqc/
+multiqc -o 01_raw_reads/01_fastqc/ 01_raw_reads/01_fastqc/
 
 
 #########################
@@ -48,7 +48,10 @@ multiqc -o 01_rawreads/01_fastqc/ 01_rawreads/01_fastqc/
 # create a directory to store trimmed reads and quality control results
 mkdir -p 02_trimmed_reads/01_fastqc
 
-for i in 01_rawreads/SRR*; do
+# copy contaminants2trimm.fa in the newlycreated directory
+cp 00_input_files/contaminants2trimm.fa 02_trimmed_reads/
+
+for i in 01_raw_reads/SRR*; do
     
     ACC="${i#*/}" &&
     TRIMDIR="02_trimmed_reads/"$ACC"_trimmed" &&
@@ -60,7 +63,7 @@ for i in 01_rawreads/SRR*; do
     "$i"/"$ACC"*1.fastq.gz "$i"/"$ACC"*2.fastq.gz \
     "$TRIMDIR"/"$ACC"_1_paired.fastq.gz "$TRIMDIR"/"$ACC"_1_unpaired.fastq.gz \
     "$TRIMDIR"/"$ACC"_2_paired.fastq.gz "$TRIMDIR"/"$ACC"_2_unpaired.fastq.gz \
-    ILLUMINACLIP:contaminants2trimm.fa:2:30:10 LEADING:5 TRAILING:5 SLIDINGWINDOW:4:15 MINLEN:65 &&
+    ILLUMINACLIP:02_trimmed_reads/contaminants2trimm.fa:2:30:10 LEADING:5 TRAILING:5 SLIDINGWINDOW:4:15 MINLEN:65 &&
     
     # execute quality check
     fastqc "$TRIMDIR"/*_paired*gz -o 02_trimmed_reads/01_fastqc -f fastq
@@ -68,74 +71,108 @@ for i in 01_rawreads/SRR*; do
 done
 
 # aggregate fastqc report into a single html file
-multiqc -o 01_rawreads/01_fastqc/ 01_rawreads/01_fastqc/
+multiqc -o 01_raw_reads/01_fastqc/ 01_raw_reads/01_fastqc/
+
+# merge reads from technical replicates into single files
+mkdir 03_merged_reads
+
+while read j; do
+
+    rep1="$(echo $j | awk -F "." '{print $1}')" &&
+    rep2="$(echo $j | awk -F "." '{print $2}')" &&
+    
+    mkdir 03_merged_reads/"$rep1"."$rep2" &&
+    
+    for i in {1,2}; do
+    
+        zcat 02_trimmed_reads/"$rep1"_trimmed/"$rep1"_"$i"_paired.fastq.gz \
+        02_trimmed_reads/"$rep2"_trimmed/"$rep2"_"$i"_paired.fastq.gz \
+        > 03_merged_reads/"$rep1"."$rep2"/"$rep1"."$rep2"_"$i"_paired.fastq &&
+        
+        gzip -9 03_merged_reads/"$rep1"."$rep2"/"$rep1"."$rep2"_"$i"_paired.fastq
+        
+    done
+done <00_input_files/tech_replicates.tsv
 
 
 ########################
 ##### READ MAPPING #####
 ########################
 
-# create a directory to store mapping results and indexed transcriptome
-mkdir -p 03_mappings/01_rphi_transcriptome
 
-# move the reference transcriptome in the newly created directory
-mv Rphi.cds.fna 03_mappings/01_rphi_transcriptome
+# create a directory to store mapping results and indexed transcriptome
+mkdir -p 04_mappings/01_rphi_transcriptome
+
+# copy the reference transcriptome in the newly created directory
+cp 00_input_files/Rphi.cds.fna 04_mappings/01_rphi_transcriptome
 
 # index transcriptome
-bowtie2-build 03_mappings/01_rphi_transcriptome/Rphi.cds.fna 03_mappings/01_rphi_transcriptome/Rphi.cds.fna
+bowtie2-build 04_mappings/01_rphi_transcriptome/Rphi.cds.fna 04_mappings/01_rphi_transcriptome/Rphi.cds.fna
 
-for i in 02_trimmed_reads/SRR*; do
+for i in 03_merged_reads/SRR*; do
 
-    RPHI="03_mappings/01_rphi_transcriptome/Rphi.cds.fna"
-    tmp="${i#*/}" && ACC="${tmp%_*}" &&
+    RPHI="04_mappings/01_rphi_transcriptome/Rphi.cds.fna"
+    ACC="$(echo $i | sed -E 's/^.+\///; s/_.+$//')" &&
 
     # map reads
     bowtie2 -x $RPHI \
     -1 "$i"/"$ACC"_1_paired.fastq.gz -2 "$i"/"$ACC"_2_paired.fastq.gz \
-    -S 03_mappings/"$ACC".mapped.sam --no-discordant -p 30 \
-    2> 03_mappings/"$ACC".mapped.log &&
+    -S 04_mappings/"$ACC".mapped.sam --no-discordant -p 30 \
+    2> 04_mappings/"$ACC".mapped.log &&
     
     # conert sam to bam
-    samtools view -b 03_mappings/"$ACC".mapped.sam > 03_mappings/"$ACC".mapped.bam &&
+    samtools view -b 04_mappings/"$ACC".mapped.sam > 04_mappings/"$ACC".mapped.bam &&
     
     # remove sam
-    rm 03_mappings/"$ACC".mapped.sam &&
+    rm 04_mappings/"$ACC".mapped.sam &&
 
     # sort and filter bam file
-    samtools sort -@ 30 03_mappings/"$ACC".mapped.bam |\
-    samtools view -t $RPHI -F 4 -h -@ 30 -b > 03_mappings/"$ACC".mapped.sorted.filtered.bam &&
+    samtools sort -@ 30 04_mappings/"$ACC".mapped.bam |\
+    samtools view -t $RPHI -F 4 -h -@ 30 -b > 04_mappings/"$ACC".mapped.sorted.filtered.bam &&
 
     # get raw counts statistics
-    samtools index 03_mappings/"$ACC".mapped.sorted.filtered.bam &&
-    samtools idxstats 03_mappings/"$ACC".mapped.sorted.filtered.bam > 03_mappings/"$ACC".rawmapping.stats.tsv &&
+    samtools index 04_mappings/"$ACC".mapped.sorted.filtered.bam &&
+    samtools idxstats 04_mappings/"$ACC".mapped.sorted.filtered.bam > 04_mappings/"$ACC".rawmapping.stats.tsv &&
 
     echo "$ACC": OK
     
 done
 
-# merge all raw mapping files into one 
-for i in 03_mappings/SRR28*tsv; do
+if [ -e conditions.ls ]; then
+    
+    rm conditions.ls
 
-    TMP="03_mappings/TMP"
+fi
+
+# merge all raw mapping files into one 
+for i in 04_mappings/SRR28*tsv; do
+
+    TMP="04_mappings/TMP"
+    ACC="$(echo $i | sed -E 's/^.+SRR/SRR/; s/\.rawmapping.+$//')"
+    COND="$(grep $ACC 00_input_files/tech_replicates.tsv | awk -F "." '{print $NF}')"
+
+    # create a table with the list of SRR and relative condition in the reading order
+    echo $ACC'\t'$(grep ) >> conditions.ls
 
     if [ ! -e $TMP ]; then
 
+        # select just the column of mapped reads
         awk '{print $1"\t"$3}' $i | head -n -1 > $TMP
         continue
 
     else
 
-        if [ -e 03_mappings/ALL.rawmapping.stats.tsv ]; then
+        if [ -e 04_mappings/ALL.rawmapping.stats.tsv ]; then
 
-            rm 03_mappings/ALL.rawmapping.stats.tsv
+            rm 04_mappings/ALL.rawmapping.stats.tsv
 
         fi
 
-        awk '{print $1"\t"$3}' $i | head -n -1 | join -j 1 -t $'\t' $TMP - > 03_mappings/ALL.rawmapping.stats.tsv &&
-        cp 03_mappings/ALL.rawmapping.stats.tsv $TMP
+        awk '{print $1"\t"$3}' $i | head -n -1 | join -j 1 -t $'\t' $TMP - > 04_mappings/ALL.rawmapping.stats.tsv &&
+        cp 04_mappings/ALL.rawmapping.stats.tsv $TMP
 
     fi
 
 done
 
-rm 03_mappings/TMP
+rm 04_mappings/TMP

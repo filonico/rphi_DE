@@ -30,3 +30,4 @@ The accession numbers of RNA-seq runs are in the following table. Technical repl
 * [<code>readsToDownload.ls</code>](/readsToDownload.ls) contains the list of accession numbers of RNA-seq experiments that have been used for the analysis; it is used to download all the sra files from NCBI.
 * [<code>readsToDownload.tsv</code>](/readsToDownload.tsv) contains a parsable version of metadata of each RNA-seq run.
 * [<code>Rphi.cds.gna</code>](/Rphi.cds.fna) contains the transcriptome to which reads were mapped.
+* [<code>Rphi.cds.eggnog.Ann.tsv</code>](/Rphi.cds.eggnogAnn.tsv) contains the GO annotation used for the GO enrichment analysis; the file was produced via the [eggNOG-mapper](http://eggnog-mapper.embl.de/) online tool (accessed on Sept 9, 2023).
