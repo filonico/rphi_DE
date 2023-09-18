@@ -1,0 +1,107 @@
+#!/usr/bin/env Rscript
+
+args = commandArgs(trailingOnly=TRUE)
+
+# args1 read raw counts
+# args2 table of conditions
+
+if (!requireNamespace("BiocManager", quietly=TRUE))
+	install.packages("BiocManager")
+
+if (!requireNamespace("NOIseq", quietly=TRUE))
+	BiocManager::install("NOIseq")
+
+if (!requireNamespace("dplyr", quietly=TRUE))
+  install.packages("dplyr")
+
+if (!requireNamespace("Biobase", quietly=TRUE))
+  install.packages("Biobase")
+
+library("dplyr")
+
+
+######################
+##### LOAD DATA ######
+######################
+
+
+# load table of rawcounts
+rawcounts <- data.frame(read.table(args[1], header = TRUE, row.names = 1))
+
+# load table of conditions
+rphi_conditions <- data.frame(read.table(args[2], header = FALSE, row.names = 1))
+names(rphi_conditions) <- "sex_fam"
+
+
+########################
+##### FILTER READS #####
+########################
+
+# filter reads and create the relative eSet object
+rphi_filtered <- NOISeq::filtered.data(rawcounts, factor = rphi_conditions$sex_fam,
+                                       norm = FALSE, depth = NULL, method = 1,
+                                       cv.cutoff = 100, cpm = 10, p.adj = "fdr")
+
+rphi_filtered_eset <- NOISeq::readData(data = rphi_filtered, factors = rphi_conditions)
+
+pdf("05_DE/explo_plot_filtered_reads.pdf", height = 6, width = 6)
+
+# saturation plot of filtered reads
+rphi_filtered_eset %>% NOISeq::dat(k = 0, ndepth = 7, type = "saturation") %>%
+  NOISeq::explo.plot(toplot = 1, samples = 1:6, yleftlim = NULL, yrightlim = NULL)
+
+# filtered raw count barplot
+rphi_filtered_eset %>% NOISeq::dat(factor = NULL, type = "countsbio") %>%
+  NOISeq::explo.plot(toplot = 1, samples = NULL, plottype = "barplot")
+
+dev.off()
+
+# PCA of raw counts
+pdf("05_DE/PCA_raw_counts.pdf", height = 6, width = 6)
+
+# saturation plot of filtered reads
+rphi_filtered_eset %>% NOISeq::dat(k = 0, ndepth = 7, type = "PCA") %>%
+  NOISeq::explo.plot()
+
+dev.off()
+
+###################################
+##### NORMALIZE COUNTS and DE #####
+###################################
+
+# tmm normalization
+rphi.tmm <- Biobase::assayData(rphi_filtered_eset)$exprs %>%
+  NOISeq::tmm(long = 1000, lc = 0)
+
+# define a function to perform DE
+perform_DE_analysis <- function(data, prefix) {
+  
+  # perform DE
+  DE_result <- data %>%
+    NOISeq::readData(factors = rphi_conditions) %>%
+    NOISeq::noiseqbio(k = 0.1, factor = "sex_fam", conditions = c(paste0(prefix, "f"), paste0(prefix, "m")))
+  
+  # get DE genes
+  DE_genes <- DE_result %>%
+    NOISeq::degenes(q = 0.95, M = NULL)
+  
+  # save to file DE genes
+  write.table(data.frame("genes" = rownames(DE_genes), DE_genes),
+              file = paste0("05_DE/", prefix, "_DE_genes.tsv"), quote = FALSE, sep = "\t")
+  
+  # plot DE results
+  pdf(paste0("05_DE/", prefix, "_DE_genes.pdf"), height = 6, width = 6)
+  
+  DE_result %>% NOISeq::DE.plot(q = 0.95, graphic = "expr", log.scale = TRUE)
+  DE_result %>% NOISeq::DE.plot(q = 0.95, graphic = "MD")
+  
+  dev.off()
+  
+  return(DE_genes)
+}
+
+# Perform differential expression analysis for females
+rphiF_DE_genes <- perform_DE_analysis(rphi.tmm, "F")
+
+# Perform differential expression analysis for males
+rphiM_DE_genes <- perform_DE_analysis(rphi.tmm, "M")
