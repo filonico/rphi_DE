@@ -7,7 +7,7 @@ The publication that produced RNA-seq data is:
 The publication that produced the reference predicted transcriptome to which reads were mapped is:
 > Xu, R., Martelossi, J., Smits, M., Iannello, M., Peruzza, L., Babbucci, M., ... & Ghiselli, F. (2022). **Multi-tissue RNA-Seq analysis and long-read-based genome assembly reveal complex sex-specific gene regulation and molecular evolution in the Manila clam**. *Genome Biology and Evolution*, *14*(12), evac171. doi: https://doi.org/10.1093/gbe/evac171
 
-The accession numbers of RNA-seq runs are in the following table. Technical replicates are grouped in each line.
+The accession numbers of RNA-seq runs are in the following table. Technical replicates are grouped in each line. In NCBI, the female-biased family is reffered to as "Family 1", and the male-biased family as "Family 2".
 
 | Run | Sex | Family |
 | --- | --- | --- |

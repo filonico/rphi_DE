@@ -78,8 +78,8 @@ mkdir 03_merged_reads
 
 while read j; do
 
-    rep1="$(echo $j | awk -F "." '{print $1}')" &&
-    rep2="$(echo $j | awk -F "." '{print $2}')" &&
+    rep1="$(echo $j | awk '{print $1}' | awk -F "." '{print $1}')" &&
+    rep2="$(echo $j | awk '{print $1}' | awk -F "." '{print $2}')" &&
     
     mkdir 03_merged_reads/"$rep1"."$rep2" &&
     
@@ -138,26 +138,27 @@ for i in 03_merged_reads/SRR*; do
     
 done
 
-if [ -e conditions.ls ]; then
+if [ -e conditions.tsv ]; then
     
-    rm conditions.ls
+    rm conditions.tsv
 
 fi
 
-# merge all raw mapping files into one 
+# merge all raw mapping files into one
 for i in 04_mappings/SRR28*tsv; do
 
-    TMP="04_mappings/TMP"
-    ACC="$(echo $i | sed -E 's/^.+SRR/SRR/; s/\.rawmapping.+$//')"
-    COND="$(grep $ACC 00_input_files/tech_replicates.tsv | awk -F "." '{print $NF}')"
+    TMP="04_mappings/TMP" &&
+    ACC="$(echo "${i#*/}" | awk -F "." '{print $1"."$2}')" &&
+    COND="$(grep $ACC 00_input_files/tech_replicates.tsv | awk '{print $NF}')" &&
 
-    # create a table with the list of SRR and relative condition in the reading order
-    echo $ACC'\t'$(grep ) >> conditions.ls
+    # create a table with the list of experiment conditions in the reading order (we will use this for DE analysis with NOIseq)
+    # NB: this file is the same as 00_input/tech_replicates.tsv, but experiments are in the order that is expected for the DE analysis (i.e., the same of the columns in the rawcount table) 
+    echo -e $ACC'\t'$COND >> conditions.tsv &&
 
     if [ ! -e $TMP ]; then
 
         # select just the column of mapped reads
-        awk '{print $1"\t"$3}' $i | head -n -1 > $TMP
+        awk '{print $1"\t"$3}' $i | sed -E "1i gene\t$ACC" | head -n -1 > $TMP &&
         continue
 
     else
@@ -168,7 +169,7 @@ for i in 04_mappings/SRR28*tsv; do
 
         fi
 
-        awk '{print $1"\t"$3}' $i | head -n -1 | join -j 1 -t $'\t' $TMP - > 04_mappings/ALL.rawmapping.stats.tsv &&
+        awk '{print $1"\t"$3}' $i | sed -E "1i gene\t$ACC" | head -n -1 | join -j 1 -t $'\t' $TMP - > 04_mappings/ALL.rawmapping.stats.tsv &&
         cp 04_mappings/ALL.rawmapping.stats.tsv $TMP
 
     fi
@@ -176,3 +177,17 @@ for i in 04_mappings/SRR28*tsv; do
 done
 
 rm 04_mappings/TMP
+
+
+#######################
+##### DE ANALYSIS #####
+#######################
+
+
+# create a directory to store input and output files of DE analysis
+mkdir 05_DE/
+
+# copy the R script, the rawcount table and the condition table in the newly created directory
+cp scripts/DE.noiseq.Rscript 05_DE/
+cp 04_mappings/ALL.rawmapping.stats.tsv 05_DE/
+mv conditions.tsv 05_DE/
