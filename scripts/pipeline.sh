@@ -207,16 +207,33 @@ mkdir 06_GO_enrichment
 # copy the R script in the newly created directory
 cp scripts/topGO_classic_elim.R 06_GO_enrichment/
 
-# get GO annotation for gene universe (genes with mapping filtered reads) and for DE genes
-for i in 05_DE/{*DE*tsv,normalized*tsv}; do
-    
+# get GO annotation for gene universe (genes with mapping filtered reads)
+tail -n +1 05_DE/normalized_read_counts.tsv |\
+awk -F "\t" '{print $1}' |\
+grep -f - 00_input_files/Rphi.cds.eggnogAnn.tsv |\
+grep -v "#" |\
+awk -F "\t" '{print $1"\t"$10}' > normalized_read_counts_eggnog.tsv
+
+# get the list of DE genes
+for i in 05_DE/*DE*tsv; do
+
     FILENAME="$(basename $i)" &&
     
-    tail -n +1 $i |\
-    awk -F "\t" '{print $1}' |\
-    grep -f - 00_input_files/Rphi.cds.eggnogAnn.tsv |\
-    grep -v "#" |\
-    awk -F "\t" '{print $1"\t"$10}' > 06_GO_enrichment/"${FILENAME/.tsv/_eggnog.tsv}"
-
+    tail -n +2 $i |\
+    awk '{print $1}' |\
+    head > 06_GO_enrichment/"${FILENAME/tsv/ls}"
+    
 done
 
+# perform DE for M and F experiments
+for i in 06_GO_enrichment/*ls; do
+
+    FILENAME="$(basename $i)" &&
+    
+    mkdir 06_GO_enrichment/"${FILENAME/.ls/_GOenrich}" &&
+    
+    Rscript 06_GO_enrichment/topGO_classic_elim.R $i 06_GO_enrichment/normalized_read_counts_eggnog.tsv &&
+    
+    mv 06_GO_enrichment/*txt 06_GO_enrichment/"${FILENAME/.ls/_GOenrich}"
+    
+done
