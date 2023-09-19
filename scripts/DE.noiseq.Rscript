@@ -8,8 +8,8 @@ args = commandArgs(trailingOnly=TRUE)
 if (!requireNamespace("BiocManager", quietly=TRUE))
 	install.packages("BiocManager")
 
-if (!requireNamespace("NOIseq", quietly=TRUE))
-	BiocManager::install("NOIseq")
+if (!requireNamespace("NOISeq", quietly=TRUE))
+	BiocManager::install("NOISeq")
 
 if (!requireNamespace("dplyr", quietly=TRUE))
   install.packages("dplyr")
@@ -36,6 +36,7 @@ names(rphi_conditions) <- "sex_fam"
 ########################
 ##### FILTER READS #####
 ########################
+
 
 # filter reads and create the relative eSet object
 rphi_filtered <- NOISeq::filtered.data(rawcounts, factor = rphi_conditions$sex_fam,
@@ -65,13 +66,19 @@ rphi_filtered_eset %>% NOISeq::dat(k = 0, ndepth = 7, type = "PCA") %>%
 
 dev.off()
 
+
 ###################################
 ##### NORMALIZE COUNTS and DE #####
 ###################################
 
+
 # tmm normalization
-rphi.tmm <- Biobase::assayData(rphi_filtered_eset)$exprs %>%
+rphi_tmm <- Biobase::assayData(rphi_filtered_eset)$exprs %>%
   NOISeq::tmm(long = 1000, lc = 0)
+
+# write to file the table of features kept for DE analysis (useful for GO enrichment)
+write.table(data.frame("genes" = rownames(rphi_tmm), rphi_tmm),
+            file = "normalized_read_counts.tsv", quote = FALSE, sep = "\t", row.names = FALSE)
 
 # define a function to perform DE
 perform_DE_analysis <- function(data, prefix) {
@@ -79,7 +86,8 @@ perform_DE_analysis <- function(data, prefix) {
   # perform DE
   DE_result <- data %>%
     NOISeq::readData(factors = rphi_conditions) %>%
-    NOISeq::noiseqbio(k = 0.1, factor = "sex_fam", conditions = c(paste0(prefix, "f"), paste0(prefix, "m")))
+    NOISeq::noiseqbio(k = 0.1, norm = "n",
+                      factor = "sex_fam", conditions = c(paste0(prefix, "f"), paste0(prefix, "m")))
   
   # get DE genes
   DE_genes <- DE_result %>%
@@ -87,7 +95,7 @@ perform_DE_analysis <- function(data, prefix) {
   
   # save to file DE genes
   write.table(data.frame("genes" = rownames(DE_genes), DE_genes),
-              file = paste0("05_DE/", prefix, "_DE_genes.tsv"), quote = FALSE, sep = "\t")
+              file = paste0("05_DE/", prefix, "_DE_genes.tsv"), quote = FALSE, sep = "\t", row.names = FALSE)
   
   # plot DE results
   pdf(paste0("05_DE/", prefix, "_DE_genes.pdf"), height = 6, width = 6)
@@ -101,7 +109,7 @@ perform_DE_analysis <- function(data, prefix) {
 }
 
 # Perform differential expression analysis for females
-rphiF_DE_genes <- perform_DE_analysis(rphi.tmm, "F")
+rphiF_DE_genes <- perform_DE_analysis(rphi_tmm, "F")
 
 # Perform differential expression analysis for males
-rphiM_DE_genes <- perform_DE_analysis(rphi.tmm, "M")
+rphiM_DE_genes <- perform_DE_analysis(rphi_tmm, "M")

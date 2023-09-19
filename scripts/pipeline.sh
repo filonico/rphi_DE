@@ -191,3 +191,32 @@ mkdir 05_DE/
 cp scripts/DE.noiseq.Rscript 05_DE/
 cp 04_mappings/ALL.rawmapping.stats.tsv 05_DE/
 mv conditions.tsv 05_DE/
+
+# execute Rscript for DE analysis
+Rscript 05_DE/DE.noiseq.Rscript 05_DE/ALL.rawmapping.stats.tsv 05_DE/conditions.tsv
+
+
+#########################
+##### GO enrichment #####
+#########################
+
+
+# create a directory to store input and output files of GO enrichment
+mkdir 06_GO_enrichment
+
+# copy the R script in the newly created directory
+cp scripts/topGO_classic_elim.R 06_GO_enrichment/
+
+# get GO annotation for gene universe (genes with mapping filtered reads) and for DE genes
+for i in 05_DE/{*DE*tsv,normalized*tsv}; do
+    
+    FILENAME="$(basename $i)" &&
+    
+    tail -n +1 $i |\
+    awk -F "\t" '{print $1}' |\
+    grep -f - 00_input_files/Rphi.cds.eggnogAnn.tsv |\
+    grep -v "#" |\
+    awk -F "\t" '{print $1"\t"$10}' > 06_GO_enrichment/"${FILENAME/.tsv/_eggnog.tsv}"
+
+done
+
