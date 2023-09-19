@@ -64,9 +64,8 @@ for (ontology in ontologies) {
   for (algorithm in algorithms) {
     
     result <- performGOEnrichment(ontology, algorithm)
-    
     file_name <- paste0("06_GO_enrichment/topGO_", ontology, "_", algorithm, ".txt")
-    
     write.table(result, file = file_name, quote = FALSE, row.names = FALSE, sep = "\t")
+    
   }
 }
