@@ -1,17 +1,21 @@
 #!/usr/bin/env Rscript
+
+# based on a script by Mariangela Iannello
+
 args = commandArgs(trailingOnly=TRUE)
 
 #args1 genes of interest
 #args2 gene universe
 
-#if (!requireNamespace("BiocManager", quietly=TRUE))
-#  install.packages("BiocManager")
+if (!requireNamespace("BiocManager", quietly=TRUE))
+ install.packages("BiocManager")
 
-#BiocManager::install("topGO")
+if (!requireNamespace("topGO", quietly=TRUE))
+ BiocManager::install("topGO")
 
 library(topGO)
 
-geneID2GO=readMappings(file=args[2])
+geneID2GO = readMappings(file=args[2])
 
 geneNames <- names(geneID2GO)
 int_genes= read.table(args[1], header = FALSE, sep = "\t")
