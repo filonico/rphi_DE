@@ -47,7 +47,7 @@ performGOEnrichment <- function(ontology, algorithm) {
   result <- runTest(GOdata, algorithm = algorithm, statistic = "fisher")
   
   # get summary table
-  Res <- GenTable(GOdata, classicFisher = result, ranksOf = "classicFisher", topNodes = 100)
+  Res <- GenTable(GOdata, classicFisher = result, ranksOf = "classicFisher", topNodes = 500)
   
   return(Res)
 }

@@ -25,6 +25,9 @@ The accession numbers of RNA-seq runs are in the following table. Technical repl
 | [SRR280913](https://trace.ncbi.nlm.nih.gov/Traces/?view=run_browser&acc=SRR280913&display=metadata) + [SRR280914](https://trace.ncbi.nlm.nih.gov/Traces/?view=run_browser&acc=SRR280914&display=metadata) | male | female-biased |
 
 ## Files in this repository
-* [<code>00_input_files/</code>](./00_input_files/) is the directory where all the necessary input files for the analyses are stored.
-* [<code>scripts/</code>](./scripts/) is the directory where the additional scripts used for the analyses are stored.
-* [<code>pipeline.sh</code>](pipeline.sh) contains all the commands used to run the analysis. Please run this script from this directory.
+| Directory/File | Description |
+| --- | --- |
+| [<code>00_input_files/</code>](./00_input_files/) | Here you can find all the necessary input files for the analyses. |
+| [<code>RESULTS/</code>](./RESULTS/) | Here you can find the results and statistics of the analysis. |
+| [<code>scripts/</code>](./scripts/) | Here you can find additional scripts used for the analyses. |
+| [<code>pipeline.sh</code>](pipeline.sh) | Complete pipeline with  all the commands used to run the analysis. <ins>Please run this script from current directory</ins>. |

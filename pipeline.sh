@@ -205,14 +205,14 @@ Rscript 05_DE/DE.noiseq.Rscript 05_DE/ALL.rawmapping.stats.tsv 05_DE/conditions.
 mkdir 06_GO_enrichment
 
 # copy the R script in the newly created directory
-cp scripts/topGO_classic_elim.R 06_GO_enrichment/
+cp scripts/topGO_classic_elim.Rscript 06_GO_enrichment/
 
 # get GO annotation for gene universe (genes with mapping filtered reads)
 tail -n +1 05_DE/normalized_read_counts.tsv |\
 awk -F "\t" '{print $1}' |\
 grep -f - 00_input_files/Rphi.cds.eggnogAnn.tsv |\
 grep -v "#" |\
-awk -F "\t" '{print $1"\t"$10}' > normalized_read_counts_eggnog.tsv
+awk -F "\t" '{print $1"\t"$10}' > 06_GO_enrichment/normalized_read_counts_eggnog.tsv
 
 # get the list of DE genes
 for i in 05_DE/*DE*tsv; do
@@ -220,8 +220,7 @@ for i in 05_DE/*DE*tsv; do
     FILENAME="$(basename $i)" &&
     
     tail -n +2 $i |\
-    awk '{print $1}' |\
-    head > 06_GO_enrichment/"${FILENAME/tsv/ls}"
+    awk '{print $1}' > 06_GO_enrichment/"${FILENAME/tsv/ls}"
     
 done
 
