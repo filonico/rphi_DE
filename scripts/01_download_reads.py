@@ -148,6 +148,3 @@ for SRA in SRA_list:
     
     print(f"Done")
     print()
-
-
-
