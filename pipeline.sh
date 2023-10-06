@@ -2,7 +2,7 @@
 
 
 #########################
-##### READ DOWNLOAD #####
+#     READ DOWNLOAD     #
 #########################
 
 
@@ -16,7 +16,7 @@ multiqc -o 01_raw_reads/01_fastqc/ 01_raw_reads/01_fastqc/
 
 
 #########################
-##### READ TRIMMING #####
+#     READ TRIMMING     #
 #########################
 
 
@@ -71,7 +71,7 @@ done <00_input_files/tech_replicates.tsv
 
 
 ########################
-##### READ MAPPING #####
+#     READ MAPPING     #
 ########################
 
 
@@ -155,7 +155,7 @@ rm 04_mappings/TMP
 
 
 #######################
-##### DE ANALYSIS #####
+#     DE ANALYSIS     #
 #######################
 
 
@@ -172,7 +172,7 @@ Rscript 05_DE/DE.noiseq.Rscript 05_DE/ALL.rawmapping.stats.tsv 05_DE/conditions.
 
 
 #########################
-##### GO enrichment #####
+#     GO enrichment     #
 #########################
 
 
