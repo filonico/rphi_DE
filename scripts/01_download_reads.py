@@ -1,5 +1,29 @@
 #!/bin/env python3
 
+
+# Given a list file of SRA accession numbers, this script is intented to download the corresponding reads from NCBI.
+# The final output would be a directory structured as follow:
+#
+# ./
+# └── your_output_dir/
+#     ├── 01_fastq/
+#     |   └── {results of fastqc analysis}
+#     ├── SRRXXXXXX1/
+#     |   ├── SRRXXXXXX1_1_fastq.gz
+#     |   └── SRRXXXXXX1_2_fastq.gz
+#     ├── SRRXXXXXX2/
+#     |   ├── SRRXXXXXX2_1_fastq.gz
+#     |   └── SRRXXXXXX2_2_fastq.gz
+#     ...
+#     └── SRRXXXXXXN/
+#         ├── SRRXXXXXXN_1_fastq.gz
+#         └── SRRXXXXXXN_2_fastq.gz
+#
+#
+# Written by:   Filippo Nicolini
+# Last updated: 06/10/2023
+
+
 import subprocess, argparse, sys
 
 ################################
