@@ -9,32 +9,7 @@
 # create a directory to store raw reads and quality control results
 mkdir -p 01_raw_reads/01_fastqc
 
-# copy readsToDownload.ls in the newly created directory
-cp 00_input_files/readsToDownload.ls 01_raw_reads/
-
-# download the .sra files
-prefetch --option-file 01_raw_reads/readsToDownload.ls -O 01_raw_reads/ &
-
-# if the previous doesn't work, try the following
-# while read j; do prefetch $j -O 01_raw_reads/; done <01_raw_reads/readsToDownload.ls
-
-for i in 01_raw_reads/SRR28*/*sra*; do
-
-    DIR="${i%/*}"
-
-    # download fastq files
-    fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files "$i" -O $DIR &&
-    
-    # execute quality check
-    fastqc "$DIR"/*fastq -o 01_raw_reads/01_fastqc -f fastq &&
-
-    # gzip fastq files
-    gzip -9 "$DIR"/*fastq &&
-
-    # remove sra files
-    rm $i
-
-done
+python3 scripts/01_download_reads.py -i 00_input_files/readsToDownload.ls
 
 # aggregate fastqc report into a single html file
 multiqc -o 01_raw_reads/01_fastqc/ 01_raw_reads/01_fastqc/
