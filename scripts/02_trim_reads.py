@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env python3
 
 # Given a directory containing paired fastq files, this script trim reads using trimmomatic.
 #
@@ -7,7 +7,7 @@
 # AccNo/
 # ├── AccNo_1.fastq.gz
 # └── AccNo_2.fastq.gz
-# This format can be easily obtained using the script 01_download_reads.py
+# This format can be easily obtained using the script https://github.com/filonico/rphi_DE/blob/main/scripts/01_download_reads.py
 #
 #
 # The script create an output directory structured as follow:
