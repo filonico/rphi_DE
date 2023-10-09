@@ -2,7 +2,7 @@
 
 
 #########################
-#     READ DOWNLOAD     #
+#     DOWNLOAD READS     #
 #########################
 
 
@@ -15,33 +15,17 @@ python3 scripts/01_download_reads.py -i 00_input_files/readsToDownload.ls
 multiqc -o 01_raw_reads/01_fastqc/ 01_raw_reads/01_fastqc/
 
 
-#########################
-#     READ TRIMMING     #
-#########################
+######################
+#     TRIM READS     #
+######################
 
 
 # create a directory to store trimmed reads and quality control results
 mkdir -p 02_trimmed_reads/01_fastqc
 
-# copy contaminants2trimm.fa in the newlycreated directory
-cp 00_input_files/contaminants2trimm.fa 02_trimmed_reads/
-
 for i in 01_raw_reads/SRR*; do
     
-    ACC="${i#*/}" &&
-    TRIMDIR="02_trimmed_reads/"$ACC"_trimmed" &&
-    
-    mkdir "$TRIMDIR" &&
-    
-    # trim reads
-    trimmomatic PE -threads 15 -phred33 \
-    "$i"/"$ACC"*1.fastq.gz "$i"/"$ACC"*2.fastq.gz \
-    "$TRIMDIR"/"$ACC"_1_paired.fastq.gz "$TRIMDIR"/"$ACC"_1_unpaired.fastq.gz \
-    "$TRIMDIR"/"$ACC"_2_paired.fastq.gz "$TRIMDIR"/"$ACC"_2_unpaired.fastq.gz \
-    ILLUMINACLIP:02_trimmed_reads/contaminants2trimm.fa:2:30:10 LEADING:5 TRAILING:5 SLIDINGWINDOW:4:15 MINLEN:65 &&
-    
-    # execute quality check
-    fastqc "$TRIMDIR"/*_paired*gz -o 02_trimmed_reads/01_fastqc -f fastq
+    python3 scripts/02_trim_reads.py -d $i -adapt 00_input_files/contaminants2trimm.fa
     
 done
 
@@ -70,9 +54,9 @@ while read j; do
 done <00_input_files/tech_replicates.tsv
 
 
-########################
-#     READ MAPPING     #
-########################
+#####################
+#     MAP READS     #
+#####################
 
 
 # create a directory to store mapping results and indexed transcriptome
