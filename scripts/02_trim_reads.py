@@ -1,7 +1,7 @@
 #!/bin/env python3
 
 # Given a directory containing paired fastq files, this script trim reads using trimmomatic.
-#
+# REQUIRED SOFTWARES: trimmomatic, fastqc
 #
 # Note that the structure of input directory should be as follow:
 # AccNo/

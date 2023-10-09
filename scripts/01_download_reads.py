@@ -3,6 +3,7 @@
 
 # Given a list file of SRA accession numbers, this script is intented to download the corresponding reads from NCBI.
 # REQUIRED SOFTWARES: sra-toolkit, fastqc
+#
 # The final output would be a directory structured as follow:
 #
 # ./
