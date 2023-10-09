@@ -31,6 +31,10 @@
 #         ├── SRRXXXXXXN_1_unpaired.fastq.gz
 #         ├── SRRXXXXXXN_2_paired.fastq.gz
 #         └── SRRXXXXXXN_2_unpaired.fastq.gz
+#
+#
+# Written by:   Filippo Nicolini
+# Last updated: 09/10/2023
 
 
 import subprocess, argparse, sys, os
