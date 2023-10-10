@@ -3,17 +3,17 @@
 # Given a directory containing paired fastq files, this script trim reads using trimmomatic.
 # REQUIRED SOFTWARES: trimmomatic, fastqc
 #
-# Note that the structure of input directory should be as follow:
+# Note that the structure of the input directory should be as follow:
 # AccNo/
 # ├── AccNo_1.fastq.gz
 # └── AccNo_2.fastq.gz
 # This format can be easily obtained using the script https://github.com/filonico/rphi_DE/blob/main/scripts/01_download_reads.py
 #
 #
-# The script create an output directory structured as follow:
+# The script creates an output directory structured as follow:
 # ./
-# └── 02_trimmed_reads/
-#     ├── 01_fastq/
+# └── your_output_dir/
+#     ├── 01_fastqc/
 #     |   └── {results of fastqc analysis}
 #     ├── SRRXXXXXX1_trimmed/
 #     |   ├── SRRXXXXXX1_1_paired.fastq.gz
@@ -35,6 +35,8 @@
 #
 # Written by:   Filippo Nicolini
 # Last updated: 09/10/2023
+#
+#------------------------------------------------------------------
 
 
 import subprocess, argparse, sys, os
@@ -67,11 +69,14 @@ args = parser.parse_args()
 def trim_reads(input_directory, acc, trim_output_dir):
     subprocess.run(f"mkdir {trim_output_dir}", shell = True)
 
+    input_acc = input_directory + "/" + acc
+    trim_output_acc = trim_output_dir + "/" + acc
+
     try:
         trimmomatic_process = subprocess.run(f"trimmomatic PE -threads 15 -phred33 "
-                                             f"{input_directory}/{acc}*1.fastq.gz {input_directory}/{acc}*2.fastq.gz "
-                                             f"{trim_output_dir}/{acc}_1_paired.fastq.gz {trim_output_dir}/{acc}_1_unpaired.fastq.gz "
-                                             f"{trim_output_dir}/{acc}_2_paired.fastq.gz {trim_output_dir}/{acc}_2_unpaired.fastq.gz "
+                                             f"{input_acc}*1.fastq.gz {input_acc}*2.fastq.gz "
+                                             f"{trim_output_acc}_1_paired.fastq.gz {trim_output_acc}_1_unpaired.fastq.gz "
+                                             f"{trim_output_acc}_2_paired.fastq.gz {trim_output_acc}_2_unpaired.fastq.gz "
                                              f"ILLUMINACLIP:{args.illumina_adapters}:2:30:10 "
                                              "LEADING:5 TRAILING:5 SLIDINGWINDOW:4:15 MINLEN:65 ",
                                              shell = True,

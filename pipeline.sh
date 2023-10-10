@@ -9,6 +9,7 @@
 # create a directory to store raw reads and quality control results
 mkdir -p 01_raw_reads/01_fastqc
 
+# download reads
 python3 scripts/01_download_reads.py -i 00_input_files/readsToDownload.ls
 
 # aggregate fastqc report into a single html file
@@ -23,6 +24,7 @@ multiqc -o 01_raw_reads/01_fastqc/ 01_raw_reads/01_fastqc/
 # create a directory to store trimmed reads and quality control results
 mkdir -p 02_trimmed_reads/01_fastqc
 
+# trim reads
 for i in 01_raw_reads/SRR*; do
     
     python3 scripts/02_trim_reads.py -d $i -adapt 00_input_files/contaminants2trimm.fa
@@ -65,35 +67,10 @@ mkdir -p 04_mappings/01_rphi_transcriptome
 # copy the reference transcriptome in the newly created directory
 cp 00_input_files/Rphi.cds.fna 04_mappings/01_rphi_transcriptome
 
-# index transcriptome
-bowtie2-build 04_mappings/01_rphi_transcriptome/Rphi.cds.fna 04_mappings/01_rphi_transcriptome/Rphi.cds.fna
-
+# map reads
 for i in 03_merged_reads/SRR*; do
 
-    RPHI="04_mappings/01_rphi_transcriptome/Rphi.cds.fna"
-    ACC="$(echo $i | sed -E 's/^.+\///; s/_.+$//')" &&
-
-    # map reads
-    bowtie2 -x $RPHI \
-    -1 "$i"/"$ACC"_1_paired.fastq.gz -2 "$i"/"$ACC"_2_paired.fastq.gz \
-    -S 04_mappings/"$ACC".mapped.sam --no-discordant -p 30 \
-    2> 04_mappings/"$ACC".mapped.log &&
-    
-    # conert sam to bam
-    samtools view -b 04_mappings/"$ACC".mapped.sam > 04_mappings/"$ACC".mapped.bam &&
-    
-    # remove sam
-    rm 04_mappings/"$ACC".mapped.sam &&
-
-    # sort and filter bam file
-    samtools sort -@ 30 04_mappings/"$ACC".mapped.bam |\
-    samtools view -t $RPHI -F 4 -h -@ 30 -b > 04_mappings/"$ACC".mapped.sorted.filtered.bam &&
-
-    # get raw counts statistics
-    samtools index 04_mappings/"$ACC".mapped.sorted.filtered.bam &&
-    samtools idxstats 04_mappings/"$ACC".mapped.sorted.filtered.bam > 04_mappings/"$ACC".rawmapping.stats.tsv &&
-
-    echo "$ACC": OK
+    python3 scripts/03_map_reads.py -d $i -ref 04_mappings/01_rphi_transcriptome/Rphi.cds.fna
     
 done
 
@@ -152,7 +129,7 @@ cp 04_mappings/ALL.rawmapping.stats.tsv 05_DE/
 mv conditions.tsv 05_DE/
 
 # execute Rscript for DE analysis
-Rscript 05_DE/DE.noiseq.Rscript 05_DE/ALL.rawmapping.stats.tsv 05_DE/conditions.tsv
+Rscript 05_DE/04_DE.noiseq.Rscript 05_DE/ALL.rawmapping.stats.tsv 05_DE/conditions.tsv
 
 
 #########################
@@ -192,7 +169,7 @@ for i in 06_GO_enrichment/*ls; do
     mkdir 06_GO_enrichment/"${FILENAME/.ls/_GOenrich}" &&
     
     # run the R script for DE
-    Rscript 06_GO_enrichment/topGO_classic_elim.Rscript $i 06_GO_enrichment/normalized_read_counts_eggnog.tsv &&
+    Rscript 06_GO_enrichment/05_topGO_classic_elim.Rscript $i 06_GO_enrichment/normalized_read_counts_eggnog.tsv &&
     
     # move DE results to the corresponding directory
     mv 06_GO_enrichment/*txt 06_GO_enrichment/"${FILENAME/.ls/_GOenrich}"
