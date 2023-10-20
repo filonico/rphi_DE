@@ -25,11 +25,7 @@ multiqc -o 01_raw_reads/01_fastqc/ 01_raw_reads/01_fastqc/
 mkdir -p 02_trimmed_reads/01_fastqc
 
 # trim reads
-for i in 01_raw_reads/SRR*; do
-    
-    python3 scripts/02_trim_reads.py -d $i -adapt 00_input_files/contaminants2trimm.fa
-    
-done
+for i in 01_raw_reads/SRR*; do python3 scripts/02_trim_reads.py -d $i -adapt 00_input_files/contaminants2trimm.fa; done
 
 # aggregate fastqc report into a single html file
 multiqc -o 02_trimmed_reads/01_fastqc 02_trimmed_reads/01_fastqc
@@ -37,23 +33,7 @@ multiqc -o 02_trimmed_reads/01_fastqc 02_trimmed_reads/01_fastqc
 # merge reads from technical replicates into single files
 mkdir 03_merged_reads
 
-while read j; do
-
-    rep1="$(echo $j | awk '{print $1}' | awk -F "." '{print $1}')" &&
-    rep2="$(echo $j | awk '{print $1}' | awk -F "." '{print $2}')" &&
-    
-    mkdir 03_merged_reads/"$rep1"."$rep2" &&
-    
-    for i in {1,2}; do
-    
-        zcat 02_trimmed_reads/"$rep1"_trimmed/"$rep1"_"$i"_paired.fastq.gz \
-        02_trimmed_reads/"$rep2"_trimmed/"$rep2"_"$i"_paired.fastq.gz \
-        > 03_merged_reads/"$rep1"."$rep2"/"$rep1"."$rep2"_"$i"_paired.fastq &&
-        
-        gzip -9 03_merged_reads/"$rep1"."$rep2"/"$rep1"."$rep2"_"$i"_paired.fastq
-        
-    done
-done <00_input_files/tech_replicates.tsv
+bash scripts/03_merge_tech_reps.sh
 
 
 #####################
@@ -68,51 +48,10 @@ mkdir -p 04_mappings/01_rphi_transcriptome
 cp 00_input_files/Rphi.cds.fna 04_mappings/01_rphi_transcriptome
 
 # map reads
-for i in 03_merged_reads/SRR*; do
-
-    python3 scripts/03_map_reads.py -d $i -ref 04_mappings/01_rphi_transcriptome/Rphi.cds.fna
-    
-done
-
-if [ -e conditions.tsv ]; then
-    
-    rm conditions.tsv
-
-fi
+for i in 03_merged_reads/SRR*; do python3 scripts/04_map_reads.py -d $i -ref 04_mappings/01_rphi_transcriptome/Rphi.cds.fna; done
 
 # merge all raw mapping files into one
-for i in 04_mappings/SRR28*tsv; do
-
-    TMP="04_mappings/TMP" &&
-    ACC="$(echo "${i#*/}" | awk -F "." '{print $1"."$2}')" &&
-    COND="$(grep $ACC 00_input_files/tech_replicates.tsv | awk '{print $NF}')" &&
-
-    # create a table with the list of experiment conditions in the reading order (we will use this for DE analysis with NOIseq)
-    # NB: this file is the same as 00_input/tech_replicates.tsv, but experiments are in the order that is expected for the DE analysis (i.e., the same of the columns in the rawcount table) 
-    echo -e $ACC'\t'$COND >> conditions.tsv &&
-
-    if [ ! -e $TMP ]; then
-
-        # select just the column of mapped reads
-        awk '{print $1"\t"$3}' $i | sed -E "1i gene\t$ACC" | head -n -1 > $TMP &&
-        continue
-
-    else
-
-        if [ -e 04_mappings/ALL.rawmapping.stats.tsv ]; then
-
-            rm 04_mappings/ALL.rawmapping.stats.tsv
-
-        fi
-
-        awk '{print $1"\t"$3}' $i | sed -E "1i gene\t$ACC" | head -n -1 | join -j 1 -t $'\t' $TMP - > 04_mappings/ALL.rawmapping.stats.tsv &&
-        cp 04_mappings/ALL.rawmapping.stats.tsv $TMP
-
-    fi
-
-done
-
-rm 04_mappings/TMP
+bash scripts/05_merge_rawmappings.sh
 
 
 #######################
@@ -124,12 +63,11 @@ rm 04_mappings/TMP
 mkdir 05_DE/
 
 # copy the R script, the rawcount table and the condition table in the newly created directory
-cp scripts/DE.noiseq.Rscript 05_DE/
 cp 04_mappings/ALL.rawmapping.stats.tsv 05_DE/
 mv conditions.tsv 05_DE/
 
 # execute Rscript for DE analysis
-Rscript 05_DE/04_DE.noiseq.Rscript 05_DE/ALL.rawmapping.stats.tsv 05_DE/conditions.tsv
+Rscript scripts/06_DE.noiseq.Rscript 05_DE/ALL.rawmapping.stats.tsv 05_DE/conditions.tsv
 
 
 #########################
@@ -144,34 +82,10 @@ mkdir 06_GO_enrichment
 cp scripts/topGO_classic_elim.Rscript 06_GO_enrichment/
 
 # get GO annotation for gene universe (genes with mapping filtered reads)
-tail -n +1 05_DE/normalized_read_counts.tsv |\
-awk -F "\t" '{print $1}' |\
-grep -f - 00_input_files/Rphi.cds.eggnogAnn.tsv |\
-grep -v "#" |\
-awk -F "\t" '{print $1"\t"$10}' > 06_GO_enrichment/normalized_read_counts_eggnog.tsv
+bash scripts/07_get_GO_geneUniverse.sh
 
 # get the list of DE genes
-for i in 05_DE/*DE*tsv; do
+bash scripts/08_get_DEgene_list.sh
 
-    FILENAME="$(basename $i)" &&
-    
-    tail -n +2 $i |\
-    awk '{print $1}' > 06_GO_enrichment/"${FILENAME/tsv/ls}"
-    
-done
-
-# perform DE for M and F experiments
-for i in 06_GO_enrichment/*ls; do
-
-    FILENAME="$(basename $i)" &&
-    
-    # create a directory to store results for each analysis
-    mkdir 06_GO_enrichment/"${FILENAME/.ls/_GOenrich}" &&
-    
-    # run the R script for DE
-    Rscript 06_GO_enrichment/05_topGO_classic_elim.Rscript $i 06_GO_enrichment/normalized_read_counts_eggnog.tsv &&
-    
-    # move DE results to the corresponding directory
-    mv 06_GO_enrichment/*txt 06_GO_enrichment/"${FILENAME/.ls/_GOenrich}"
-    
-done
+# perform GO enrichment for M and F experiments
+bash scripts/09_run_GOenrich.sh
