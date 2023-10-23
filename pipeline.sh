@@ -12,6 +12,8 @@ mkdir -p 01_raw_reads/01_fastqc
 # REQUIRES sra-tool and fastqc
 python3 scripts/01_download_reads.py -i 00_input_files/readsToDownload.ls
 
+rm 01_raw_reads/SRR280915.sralite
+
 # aggregate fastqc report into a single html file
 multiqc -o 01_raw_reads/01_fastqc/ 01_raw_reads/01_fastqc/
 
