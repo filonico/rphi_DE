@@ -90,7 +90,7 @@ def from_sam_to_rawcounts(sam_file, acc, indexed_transcriptome, output_directory
 
         # Sort and filter bam file
         sort_n_filter_process = subprocess.run(f"samtools sort -@ 30 {output_acc}.mapped.bam | "
-                                               f"samtools view -t {index_transcriptome} -F 4 -h -@ 30 -b "
+                                               f"samtools view -b -t {indexed_transcriptome} -F 4 -h -@ 30 "
                                                f"> {output_acc}.mapped.sorted.filtered.bam",
                                                shell = True,
                                                capture_output = True,
