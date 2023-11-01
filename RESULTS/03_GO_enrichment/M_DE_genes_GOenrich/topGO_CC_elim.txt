@@ -124,7 +124,7 @@ GO:0097433	dense body	9	5	2.24	0.04829
 GO:0005882	intermediate filament	9	5	2.24	0.04829
 GO:0016460	myosin II complex	9	5	2.24	0.04829
 GO:0016459	myosin complex	30	12	7.48	0.04932
-GO:0034702	ion channel complex	43	16	10.72	0.04965
+GO:0034702	monoatomic ion channel complex	43	16	10.72	0.04965
 GO:0032587	ruffle membrane	43	16	10.72	0.04965
 GO:0036194	muscle cell projection	4	3	1	0.05035
 GO:0001740	Barr body	4	3	1	0.05035
@@ -390,6 +390,7 @@ GO:0061834	actin filament branch point	1	1	0.25	0.24934
 GO:0061835	ventral surface of cell	1	1	0.25	0.24934
 GO:0030426	growth cone	137	38	34.16	0.24956
 GO:0000242	pericentriolar material	21	7	5.24	0.25375
+GO:0034518	RNA cap binding complex	21	7	5.24	0.25375
 GO:0035371	microtubule plus-end	21	7	5.24	0.25375
 GO:0005767	secondary lysosome	14	5	3.49	0.25635
 GO:0035253	ciliary rootlet	14	5	3.49	0.25635
@@ -498,4 +499,3 @@ GO:0001917	photoreceptor inner segment	20	6	4.99	0.38008
 GO:0031594	neuromuscular junction	86	23	21.44	0.38821
 GO:0030140	trans-Golgi network transport vesicle	24	7	5.98	0.38957
 GO:0150034	distal axon	212	55	52.86	0.39108
-GO:0005923	bicellular tight junction	28	8	6.98	0.39699

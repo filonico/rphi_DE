@@ -183,7 +183,7 @@ GO:0019773	proteasome core complex, alpha-subunit c...	9	5	2.24	0.04829
 GO:0097433	dense body	9	5	2.24	0.04829
 GO:0016459	myosin complex	30	12	7.48	0.04932
 GO:0032587	ruffle membrane	43	16	10.72	0.04965
-GO:0034702	ion channel complex	43	16	10.72	0.04965
+GO:0034702	monoatomic ion channel complex	43	16	10.72	0.04965
 GO:0098858	actin-based cell projection	112	36	27.93	0.05023
 GO:0001740	Barr body	4	3	1	0.05035
 GO:0030428	cell septum	4	3	1	0.05035
@@ -443,6 +443,7 @@ GO:1990604	IRE1-TRAF2-ASK1 complex	1	1	0.25	0.24934
 GO:1990742	microvesicle	1	1	0.25	0.24934
 GO:0030426	growth cone	137	38	34.16	0.24956
 GO:0000242	pericentriolar material	21	7	5.24	0.25375
+GO:0034518	RNA cap binding complex	21	7	5.24	0.25375
 GO:0035371	microtubule plus-end	21	7	5.24	0.25375
 GO:0005767	secondary lysosome	14	5	3.49	0.25635
 GO:0035060	brahma complex	14	5	3.49	0.25635
@@ -498,4 +499,3 @@ GO:0045293	mRNA editing complex	8	3	1.99	0.31977
 GO:0071212	subsynaptic reticulum	8	3	1.99	0.31977
 GO:0120103	centriolar subdistal appendage	8	3	1.99	0.31977
 GO:1905360	GTPase complex	8	3	1.99	0.31977
-GO:0032279	asymmetric synapse	114	31	28.42	0.32018

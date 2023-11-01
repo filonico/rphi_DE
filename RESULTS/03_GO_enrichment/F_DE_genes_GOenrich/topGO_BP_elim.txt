@@ -1,501 +1,501 @@
 GO.ID	Term	Annotated	Significant	Expected	classicFisher
-GO:0000398	mRNA splicing, via spliceosome	341	93	42.05	6.6e-11
-GO:0006334	nucleosome assembly	34	16	4.19	6.3e-07
-GO:0071103	DNA conformation change	180	52	22.2	9.6e-07
-GO:0010564	regulation of cell cycle process	604	132	74.49	4.1e-06
-GO:2000113	negative regulation of cellular macromol...	720	126	88.8	1.1e-05
-GO:0031503	protein-containing complex localization	250	53	30.83	3.8e-05
-GO:0010628	positive regulation of gene expression	1041	173	128.38	6.8e-05
-GO:0040029	epigenetic regulation of gene expression	236	53	29.11	7.4e-05
-GO:0006611	protein export from nucleus	195	43	24.05	7.9e-05
-GO:0006260	DNA replication	228	54	28.12	8.8e-05
-GO:0051383	kinetochore organization	18	9	2.22	0.00011
-GO:0071166	ribonucleoprotein complex localization	145	37	17.88	0.00013
-GO:0031124	mRNA 3'-end processing	105	35	12.95	0.00017
-GO:0000381	regulation of alternative mRNA splicing,...	80	22	9.87	0.00018
-GO:0000083	regulation of transcription involved in ...	19	9	2.34	0.00018
-GO:0006974	cellular response to DNA damage stimulus	568	101	70.05	0.00022
-GO:0051984	positive regulation of chromosome segreg...	41	17	5.06	0.00025
-GO:0032508	DNA duplex unwinding	66	19	8.14	0.00026
-GO:0006406	mRNA export from nucleus	115	31	14.18	0.00026
-GO:0072332	intrinsic apoptotic signaling pathway by...	51	16	6.29	0.00027
-GO:1901796	regulation of signal transduction by p53...	106	26	13.07	0.00037
-GO:0001178	regulation of transcriptional start site...	13	7	1.6	0.00037
-GO:0034968	histone lysine methylation	83	24	10.24	0.00040
-GO:0019827	stem cell population maintenance	148	33	18.25	0.00043
-GO:0000463	maturation of LSU-rRNA from tricistronic...	10	6	1.23	0.00047
-GO:0072718	response to cisplatin	7	5	0.86	0.00048
-GO:0006338	chromatin remodeling	211	61	26.02	0.00064
-GO:0000122	negative regulation of transcription by ...	386	69	47.6	0.00070
-GO:0007221	positive regulation of transcription of ...	18	8	2.22	0.00072
-GO:0006364	rRNA processing	196	44	24.17	0.00088
-GO:0046621	negative regulation of organ growth	41	13	5.06	0.00089
-GO:0010032	meiotic chromosome condensation	11	6	1.36	0.00092
-GO:1904749	regulation of protein localization to nu...	5	4	0.62	0.00104
-GO:0010793	regulation of mRNA export from nucleus	5	4	0.62	0.00104
-GO:0032968	positive regulation of transcription elo...	19	8	2.34	0.00112
-GO:0010629	negative regulation of gene expression	1085	172	133.81	0.00115
-GO:0031440	regulation of mRNA 3'-end processing	45	17	5.55	0.00118
-GO:2000112	regulation of cellular macromolecule bio...	1597	260	196.96	0.00121
-GO:0016070	RNA metabolic process	2113	381	260.59	0.00132
-GO:1901894	regulation of ATPase-coupled calcium tra...	3	3	0.37	0.00187
-GO:0061436	establishment of skin barrier	3	3	0.37	0.00187
-GO:0048866	stem cell fate specification	3	3	0.37	0.00187
-GO:0071163	DNA replication preinitiation complex as...	3	3	0.37	0.00187
-GO:0062033	positive regulation of mitotic sister ch...	25	9	3.08	0.00205
-GO:0007064	mitotic sister chromatid cohesion	34	13	4.19	0.00221
-GO:0043217	myelin maintenance	9	5	1.11	0.00231
-GO:0032876	negative regulation of DNA endoreduplica...	9	5	1.11	0.00231
-GO:0045876	positive regulation of sister chromatid ...	9	5	1.11	0.00231
-GO:0071318	cellular response to ATP	9	5	1.11	0.00231
-GO:0070198	protein localization to chromosome, telo...	21	8	2.59	0.00240
-GO:2001233	regulation of apoptotic signaling pathwa...	215	41	26.52	0.00256
-GO:0051276	chromosome organization	881	176	108.65	0.00259
-GO:0051657	maintenance of organelle location	17	7	2.1	0.00268
-GO:0040010	positive regulation of growth rate	17	7	2.1	0.00268
-GO:0010837	regulation of keratinocyte proliferation	17	7	2.1	0.00268
-GO:1900364	negative regulation of mRNA polyadenylat...	17	7	2.1	0.00268
-GO:1990709	presynaptic active zone organization	13	6	1.6	0.00275
-GO:0007076	mitotic chromosome condensation	26	9	3.21	0.00279
-GO:0051302	regulation of cell division	133	28	16.4	0.00281
-GO:0040028	regulation of vulval development	41	12	5.06	0.00297
-GO:0051101	regulation of DNA binding	74	18	9.13	0.00312
-GO:0006310	DNA recombination	180	35	22.2	0.00370
-GO:0000027	ribosomal large subunit assembly	32	10	3.95	0.00387
-GO:0009303	rRNA transcription	32	10	3.95	0.00387
-GO:0110020	regulation of actomyosin structure organ...	64	16	7.89	0.00388
-GO:0000226	microtubule cytoskeleton organization	591	98	72.89	0.00396
-GO:0034728	nucleosome organization	77	28	9.5	0.00401
-GO:0051253	negative regulation of RNA metabolic pro...	613	115	75.6	0.00402
-GO:1904776	regulation of protein localization to ce...	10	5	1.23	0.00416
-GO:2001032	regulation of double-strand break repair...	10	5	1.23	0.00416
-GO:1901989	positive regulation of cell cycle phase ...	99	26	12.21	0.00423
-GO:0033044	regulation of chromosome organization	356	76	43.9	0.00443
-GO:0046940	nucleoside monophosphate phosphorylation	23	8	2.84	0.00462
-GO:0031060	regulation of histone methylation	60	15	7.4	0.00510
-GO:1902275	regulation of chromatin organization	177	34	21.83	0.00511
-GO:0009451	RNA modification	114	24	14.06	0.00546
-GO:1901673	regulation of mitotic spindle assembly	19	7	2.34	0.00557
-GO:0032211	negative regulation of telomere maintena...	19	7	2.34	0.00557
-GO:0031570	DNA integrity checkpoint signaling	133	27	16.4	0.00560
-GO:0051053	negative regulation of DNA metabolic pro...	107	30	13.2	0.00579
-GO:0051029	rRNA transport	7	4	0.86	0.00590
-GO:1900087	positive regulation of G1/S transition o...	34	10	4.19	0.00626
-GO:0045727	positive regulation of translation	109	23	13.44	0.00627
-GO:0048025	negative regulation of mRNA splicing, vi...	29	9	3.58	0.00637
-GO:0040016	embryonic cleavage	15	6	1.85	0.00644
-GO:0032786	positive regulation of DNA-templated tra...	23	11	2.84	0.00664
-GO:0140013	meiotic nuclear division	240	43	29.6	0.00666
-GO:1904908	negative regulation of maintenance of mi...	4	3	0.49	0.00679
-GO:0048254	snoRNA localization	4	3	0.49	0.00679
-GO:0045617	negative regulation of keratinocyte diff...	4	3	0.49	0.00679
-GO:0034729	histone H3-K79 methylation	4	3	0.49	0.00679
-GO:0007346	regulation of mitotic cell cycle	531	94	65.49	0.00726
-GO:0051972	regulation of telomerase activity	35	10	4.32	0.00782
-GO:1904358	positive regulation of telomere maintena...	35	10	4.32	0.00782
-GO:0120192	tight junction assembly	52	13	6.41	0.00884
-GO:0140718	facultative heterochromatin formation	16	6	1.97	0.00925
-GO:0072520	seminiferous tubule development	16	6	1.97	0.00925
-GO:0060282	positive regulation of oocyte developmen...	16	6	1.97	0.00925
-GO:0045840	positive regulation of mitotic nuclear d...	47	12	5.8	0.00982
-GO:0045893	positive regulation of DNA-templated tra...	685	116	84.48	0.01013
-GO:1901798	positive regulation of signal transducti...	21	7	2.59	0.01031
-GO:1905508	protein localization to microtubule orga...	21	7	2.59	0.01031
-GO:0071539	protein localization to centrosome	21	7	2.59	0.01031
-GO:1902253	regulation of intrinsic apoptotic signal...	26	8	3.21	0.01052
-GO:0019991	septate junction assembly	26	8	3.21	0.01052
-GO:0014017	neuroblast fate commitment	12	5	1.48	0.01058
-GO:0097064	ncRNA export from nucleus	12	5	1.48	0.01058
-GO:1902255	positive regulation of intrinsic apoptot...	12	5	1.48	0.01058
-GO:0051315	attachment of mitotic spindle microtubul...	12	5	1.48	0.01058
-GO:0045932	negative regulation of muscle contractio...	12	5	1.48	0.01058
-GO:0060287	epithelial cilium movement involved in d...	12	5	1.48	0.01058
-GO:0006366	transcription by RNA polymerase II	1014	171	125.05	0.01061
-GO:0010452	histone H3-K36 methylation	8	4	0.99	0.01067
-GO:0034770	histone H4-K20 methylation	8	4	0.99	0.01067
-GO:0006398	mRNA 3'-end processing by stem-loop bind...	8	4	0.99	0.01067
-GO:0051497	negative regulation of stress fiber asse...	8	4	0.99	0.01067
-GO:0030261	chromosome condensation	68	19	8.39	0.01127
-GO:0044786	cell cycle DNA replication	72	22	8.88	0.01168
-GO:0035019	somatic stem cell population maintenance	37	10	4.56	0.01182
-GO:2001235	positive regulation of apoptotic signali...	96	20	11.84	0.01196
-GO:1903507	negative regulation of nucleic acid-temp...	545	98	67.21	0.01241
-GO:1902679	negative regulation of RNA biosynthetic ...	545	98	67.21	0.01241
-GO:0032212	positive regulation of telomere maintena...	32	9	3.95	0.01272
-GO:0042771	intrinsic apoptotic signaling pathway in...	32	9	3.95	0.01272
-GO:1904580	regulation of intracellular mRNA localiz...	17	6	2.1	0.01284
-GO:0007317	regulation of pole plasm oskar mRNA loca...	17	6	2.1	0.01284
-GO:1902875	regulation of embryonic pattern specific...	17	6	2.1	0.01284
-GO:0045815	transcription initiation-coupled chromat...	43	11	5.3	0.01298
-GO:0044770	cell cycle phase transition	500	93	61.66	0.01324
-GO:0008334	histone mRNA metabolic process	27	8	3.33	0.01337
-GO:0045943	positive regulation of transcription by ...	22	7	2.71	0.01354
-GO:0044772	mitotic cell cycle phase transition	425	76	52.41	0.01400
-GO:0002562	somatic diversification of immune recept...	38	10	4.69	0.01433
-GO:0032465	regulation of cytokinesis	73	16	9	0.01454
-GO:0060633	negative regulation of transcription ini...	2	2	0.25	0.01519
-GO:1904750	negative regulation of protein localizat...	2	2	0.25	0.01519
-GO:1901896	positive regulation of ATPase-coupled ca...	2	2	0.25	0.01519
-GO:0061394	regulation of transcription from RNA pol...	2	2	0.25	0.01519
-GO:0061395	positive regulation of transcription fro...	2	2	0.25	0.01519
-GO:0070318	positive regulation of G0 to G1 transiti...	2	2	0.25	0.01519
-GO:1901692	regulation of compound eye retinal cell ...	2	2	0.25	0.01519
-GO:1901693	negative regulation of compound eye reti...	2	2	0.25	0.01519
-GO:0045065	cytotoxic T cell differentiation	2	2	0.25	0.01519
-GO:0000481	maturation of 5S rRNA	2	2	0.25	0.01519
-GO:0017055	negative regulation of RNA polymerase II...	2	2	0.25	0.01519
-GO:0021886	hypothalamus gonadotrophin-releasing hor...	2	2	0.25	0.01519
-GO:0021888	hypothalamus gonadotrophin-releasing hor...	2	2	0.25	0.01519
-GO:1903279	regulation of calcium:sodium antiporter ...	2	2	0.25	0.01519
-GO:0021979	hypothalamus cell differentiation	2	2	0.25	0.01519
-GO:0014018	neuroblast fate specification	2	2	0.25	0.01519
-GO:0034428	nuclear-transcribed mRNA catabolic proce...	2	2	0.25	0.01519
-GO:1905833	negative regulation of microtubule nucle...	2	2	0.25	0.01519
-GO:0010607	negative regulation of cytoplasmic mRNA ...	2	2	0.25	0.01519
-GO:0045583	regulation of cytotoxic T cell different...	2	2	0.25	0.01519
-GO:0045585	positive regulation of cytotoxic T cell ...	2	2	0.25	0.01519
-GO:0060087	relaxation of vascular associated smooth...	2	2	0.25	0.01519
-GO:1902423	regulation of attachment of mitotic spin...	2	2	0.25	0.01519
-GO:1902425	positive regulation of attachment of mit...	2	2	0.25	0.01519
-GO:0043972	histone H3-K23 acetylation	2	2	0.25	0.01519
-GO:0010938	cytoplasmic microtubule depolymerization	2	2	0.25	0.01519
-GO:2000143	negative regulation of DNA-templated tra...	2	2	0.25	0.01519
-GO:0097332	response to antipsychotic drug	2	2	0.25	0.01519
-GO:1990010	compound eye retinal cell apoptotic proc...	2	2	0.25	0.01519
-GO:0001842	neural fold formation	2	2	0.25	0.01519
-GO:0035321	maintenance of imaginal disc-derived win...	2	2	0.25	0.01519
-GO:0006261	DNA-templated DNA replication	150	34	18.5	0.01525
-GO:1904742	regulation of telomeric DNA binding	5	3	0.62	0.01542
-GO:1990845	adaptive thermogenesis	5	3	0.62	0.01542
-GO:0051987	positive regulation of attachment of spi...	5	3	0.62	0.01542
-GO:0000335	negative regulation of transposition, DN...	5	3	0.62	0.01542
-GO:0000337	regulation of transposition, DNA-mediate...	5	3	0.62	0.01542
-GO:0021747	cochlear nucleus development	5	3	0.62	0.01542
-GO:1904975	response to bleomycin	5	3	0.62	0.01542
-GO:1904976	cellular response to bleomycin	5	3	0.62	0.01542
-GO:0032287	peripheral nervous system myelin mainten...	5	3	0.62	0.01542
-GO:0072719	cellular response to cisplatin	5	3	0.62	0.01542
-GO:0005991	trehalose metabolic process	5	3	0.62	0.01542
-GO:0007512	adult heart development	5	3	0.62	0.01542
-GO:0006313	transposition, DNA-mediated	5	3	0.62	0.01542
-GO:2000270	negative regulation of fibroblast apopto...	5	3	0.62	0.01542
-GO:0045988	negative regulation of striated muscle c...	5	3	0.62	0.01542
-GO:0035041	sperm DNA decondensation	5	3	0.62	0.01542
-GO:0000012	single strand break repair	13	5	1.6	0.01548
-GO:1903204	negative regulation of oxidative stress-...	13	5	1.6	0.01548
-GO:0007527	adult somatic muscle development	13	5	1.6	0.01548
-GO:0051257	meiotic spindle midzone assembly	13	5	1.6	0.01548
-GO:1904355	positive regulation of telomere capping	13	5	1.6	0.01548
-GO:0010557	positive regulation of macromolecule bio...	918	151	113.22	0.01582
-GO:2001242	regulation of intrinsic apoptotic signal...	105	21	12.95	0.01601
-GO:0006413	translational initiation	171	31	21.09	0.01659
-GO:0046427	positive regulation of receptor signalin...	28	8	3.45	0.01675
-GO:1904894	positive regulation of receptor signalin...	28	8	3.45	0.01675
-GO:0072698	protein localization to microtubule cyto...	28	8	3.45	0.01675
-GO:0044380	protein localization to cytoskeleton	28	8	3.45	0.01675
-GO:0006281	DNA repair	371	63	45.75	0.01684
-GO:0042023	DNA endoreduplication	27	11	3.33	0.01688
-GO:0032206	positive regulation of telomere maintena...	44	14	5.43	0.01689
-GO:0032200	telomere organization	143	34	17.64	0.01702
-GO:0034341	response to type II interferon	39	10	4.81	0.01720
-GO:0007632	visual behavior	39	10	4.81	0.01720
-GO:0000076	DNA replication checkpoint signaling	18	6	2.22	0.01729
-GO:0034508	centromere complex assembly	18	6	2.22	0.01729
-GO:0051255	spindle midzone assembly	18	6	2.22	0.01729
-GO:0035865	cellular response to potassium ion	9	4	1.11	0.01735
-GO:0007400	neuroblast fate determination	9	4	1.11	0.01735
-GO:0040022	feminization of hermaphroditic germ-line	9	4	1.11	0.01735
-GO:0010838	positive regulation of keratinocyte prol...	9	4	1.11	0.01735
-GO:0048857	neural nucleus development	9	4	1.11	0.01735
-GO:2000269	regulation of fibroblast apoptotic proce...	9	4	1.11	0.01735
-GO:0051382	kinetochore assembly	9	4	1.11	0.01735
-GO:1904424	regulation of GTP binding	9	4	1.11	0.01735
-GO:2001252	positive regulation of chromosome organi...	174	44	21.46	0.01754
-GO:0000184	nuclear-transcribed mRNA catabolic proce...	106	21	13.07	0.01773
-GO:0070828	heterochromatin organization	67	18	8.26	0.01810
-GO:2001244	positive regulation of intrinsic apoptot...	45	11	5.55	0.01823
-GO:0010948	negative regulation of cell cycle proces...	293	62	36.14	0.01837
-GO:0051099	positive regulation of binding	126	24	15.54	0.01873
-GO:0007614	short-term memory	34	9	4.19	0.01900
-GO:0060420	regulation of heart growth	34	9	4.19	0.01900
-GO:2000573	positive regulation of DNA biosynthetic ...	57	13	7.03	0.01911
-GO:0043631	RNA polyadenylation	57	17	7.03	0.01963
-GO:0006378	mRNA polyadenylation	57	17	7.03	0.01963
-GO:0000460	maturation of 5.8S rRNA	40	10	4.93	0.02048
-GO:0055021	regulation of cardiac muscle tissue grow...	29	8	3.58	0.02070
-GO:0070316	regulation of G0 to G1 transition	29	8	3.58	0.02070
-GO:0051973	positive regulation of telomerase activi...	29	8	3.58	0.02070
-GO:0035264	multicellular organism growth	174	31	21.46	0.02090
-GO:0010501	RNA secondary structure unwinding	46	11	5.67	0.02138
-GO:0040027	negative regulation of vulval developmen...	14	5	1.73	0.02169
-GO:0045724	positive regulation of cilium assembly	24	7	2.96	0.02209
-GO:1904353	regulation of telomere capping	24	7	2.96	0.02209
-GO:1903506	regulation of nucleic acid-templated tra...	1287	210	158.72	0.02213
-GO:1903508	positive regulation of nucleic acid-temp...	735	120	90.65	0.02225
-GO:1902680	positive regulation of RNA biosynthetic ...	735	120	90.65	0.02225
-GO:0008283	cell population proliferation	1023	150	126.16	0.02264
-GO:0051225	spindle assembly	148	31	18.25	0.02282
-GO:2001141	regulation of RNA biosynthetic process	1288	210	158.85	0.02287
-GO:0007088	regulation of mitotic nuclear division	170	35	20.97	0.02358
-GO:0051254	positive regulation of RNA metabolic pro...	844	134	104.09	0.02362
-GO:2000059	negative regulation of ubiquitin-depende...	41	10	5.06	0.02420
-GO:0016444	somatic cell DNA recombination	41	10	5.06	0.02420
-GO:0043462	regulation of ATP-dependent activity	56	15	6.91	0.02455
-GO:0046425	regulation of receptor signaling pathway...	65	14	8.02	0.02477
-GO:1904892	regulation of receptor signaling pathway...	65	14	8.02	0.02477
-GO:0070507	regulation of microtubule cytoskeleton o...	176	35	21.71	0.02498
-GO:0045448	mitotic cell cycle, embryonic	53	12	6.54	0.02517
-GO:0006356	regulation of transcription by RNA polym...	30	8	3.7	0.02528
-GO:0032774	RNA biosynthetic process	1404	228	173.15	0.02581
-GO:0045814	negative regulation of gene expression, ...	107	24	13.2	0.02596
-GO:0032075	positive regulation of nuclease activity	10	4	1.23	0.02614
-GO:0099558	maintenance of synapse structure	10	4	1.23	0.02614
-GO:1990700	nucleolar chromatin organization	10	4	1.23	0.02614
-GO:0051988	regulation of attachment of spindle micr...	10	4	1.23	0.02614
-GO:0032232	negative regulation of actin filament bu...	10	4	1.23	0.02614
-GO:1901977	negative regulation of cell cycle checkp...	10	4	1.23	0.02614
-GO:0036098	male germ-line stem cell population main...	10	4	1.23	0.02614
-GO:0090085	regulation of protein deubiquitination	10	4	1.23	0.02614
-GO:0006265	DNA topological change	10	4	1.23	0.02614
-GO:0060760	positive regulation of response to cytok...	10	4	1.23	0.02614
-GO:0090650	cellular response to oxygen-glucose depr...	10	4	1.23	0.02614
-GO:0090649	response to oxygen-glucose deprivation	10	4	1.23	0.02614
-GO:0006355	regulation of DNA-templated transcriptio...	1252	205	154.41	0.02620
-GO:1902850	microtubule cytoskeleton organization in...	211	40	26.02	0.02624
-GO:0006351	DNA-templated transcription	1364	223	168.22	0.02639
-GO:0045132	meiotic chromosome segregation	130	24	16.03	0.02660
-GO:0007052	mitotic spindle organization	150	31	18.5	0.02705
-GO:0051100	negative regulation of binding	117	22	14.43	0.02716
-GO:0050792	regulation of viral process	91	18	11.22	0.02725
-GO:0097696	receptor signaling pathway via STAT	72	15	8.88	0.02729
-GO:0007259	receptor signaling pathway via JAK-STAT	72	15	8.88	0.02729
-GO:0007004	telomere maintenance via telomerase	61	17	7.52	0.02729
-GO:0006278	RNA-templated DNA biosynthetic process	61	17	7.52	0.02729
-GO:1902749	regulation of cell cycle G2/M phase tran...	137	25	16.9	0.02732
-GO:0000466	maturation of 5.8S rRNA from tricistroni...	25	7	3.08	0.02751
-GO:0007277	pole cell development	25	7	3.08	0.02751
-GO:1902570	protein localization to nucleolus	11	7	1.36	0.02769
-GO:0006357	regulation of transcription by RNA polym...	929	157	114.57	0.02778
-GO:0048863	stem cell differentiation	134	27	16.53	0.02785
-GO:0046784	viral mRNA export from host cell nucleus	6	3	0.74	0.02803
-GO:1905097	regulation of guanyl-nucleotide exchange...	6	3	0.74	0.02803
-GO:1905098	negative regulation of guanyl-nucleotide...	6	3	0.74	0.02803
-GO:0007079	mitotic chromosome movement towards spin...	6	3	0.74	0.02803
-GO:0048790	maintenance of presynaptic active zone s...	6	3	0.74	0.02803
-GO:0048789	cytoskeletal matrix organization at acti...	6	3	0.74	0.02803
-GO:0034465	response to carbon monoxide	6	3	0.74	0.02803
-GO:0042381	hemolymph coagulation	6	3	0.74	0.02803
-GO:2000371	regulation of DNA topoisomerase (ATP-hyd...	6	3	0.74	0.02803
-GO:2000373	positive regulation of DNA topoisomerase...	6	3	0.74	0.02803
-GO:0042464	dosage compensation by hypoactivation of...	6	3	0.74	0.02803
-GO:0022027	interkinetic nuclear migration	6	3	0.74	0.02803
-GO:1902167	positive regulation of intrinsic apoptot...	6	3	0.74	0.02803
-GO:0006407	rRNA export from nucleus	6	3	0.74	0.02803
-GO:0035039	male pronucleus assembly	6	3	0.74	0.02803
-GO:0044417	translocation of molecules into host	6	3	0.74	0.02803
-GO:2001234	negative regulation of apoptotic signali...	124	23	15.29	0.02809
-GO:0007051	spindle organization	240	44	29.6	0.02818
-GO:0070925	organelle assembly	787	123	97.06	0.02850
-GO:0000018	regulation of DNA recombination	60	13	7.4	0.02855
-GO:0048524	positive regulation of viral process	60	13	7.4	0.02855
-GO:1902017	regulation of cilium assembly	54	12	6.66	0.02887
-GO:2000736	regulation of stem cell differentiation	54	12	6.66	0.02887
-GO:0055008	cardiac muscle tissue morphogenesis	20	6	2.47	0.02914
-GO:0014016	neuroblast differentiation	20	6	2.47	0.02914
-GO:0051661	maintenance of centrosome location	15	5	1.85	0.02931
-GO:0060043	regulation of cardiac muscle cell prolif...	15	5	1.85	0.02931
-GO:0097659	nucleic acid-templated transcription	1392	226	171.67	0.02945
-GO:0032210	regulation of telomere maintenance via t...	50	15	6.17	0.02950
-GO:0048511	rhythmic process	193	33	23.8	0.03042
-GO:0045023	G0 to G1 transition	31	8	3.82	0.03051
-GO:0032922	circadian regulation of gene expression	31	8	3.82	0.03051
-GO:0031111	negative regulation of microtubule polym...	31	8	3.82	0.03051
-GO:0140694	non-membrane-bounded organelle assembly	362	66	44.64	0.03141
-GO:0071236	cellular response to antibiotic	99	19	12.21	0.03166
-GO:0009891	positive regulation of biosynthetic proc...	985	157	121.48	0.03175
-GO:0071346	cellular response to type II interferon	37	9	4.56	0.03223
-GO:0051781	positive regulation of cell division	61	13	7.52	0.03235
-GO:0031328	positive regulation of cellular biosynth...	970	155	119.63	0.03243
-GO:0043414	macromolecule methylation	201	46	24.79	0.03275
-GO:0002200	somatic diversification of immune recept...	43	10	5.3	0.03304
-GO:0051492	regulation of stress fiber assembly	43	10	5.3	0.03304
-GO:0000077	DNA damage checkpoint signaling	126	23	15.54	0.03322
-GO:0001578	microtubule bundle formation	126	23	15.54	0.03322
-GO:0006277	DNA amplification	26	7	3.21	0.03377
-GO:0034660	ncRNA metabolic process	485	94	59.81	0.03404
-GO:0007507	heart development	366	57	45.14	0.03409
-GO:0051052	regulation of DNA metabolic process	293	64	36.14	0.03478
-GO:0051252	regulation of RNA metabolic process	1477	245	182.16	0.03523
-GO:0045944	positive regulation of transcription by ...	529	89	65.24	0.03553
-GO:1903047	mitotic cell cycle process	730	131	90.03	0.03638
-GO:0090169	regulation of spindle assembly	30	11	3.7	0.03640
-GO:0000154	rRNA modification	32	8	3.95	0.03644
-GO:0061062	regulation of nematode larval developmen...	81	16	9.99	0.03644
-GO:0002026	regulation of the force of heart contrac...	21	6	2.59	0.03668
-GO:0000478	endonucleolytic cleavage involved in rRN...	21	6	2.59	0.03668
-GO:0097120	receptor localization to synapse	21	6	2.59	0.03668
-GO:0032259	methylation	216	48	26.64	0.03703
-GO:0055022	negative regulation of cardiac muscle ti...	11	4	1.36	0.03716
-GO:0061117	negative regulation of heart growth	11	4	1.36	0.03716
-GO:0072711	cellular response to hydroxyurea	11	4	1.36	0.03716
-GO:0090075	relaxation of muscle	11	4	1.36	0.03716
-GO:0043558	regulation of translational initiation i...	11	4	1.36	0.03716
-GO:0010603	regulation of cytoplasmic mRNA processin...	11	4	1.36	0.03716
-GO:0043923	positive regulation by host of viral tra...	11	4	1.36	0.03716
-GO:0051783	regulation of nuclear division	203	39	25.04	0.03758
-GO:0031062	positive regulation of histone methylati...	38	9	4.69	0.03778
-GO:0001510	RNA methylation	50	11	6.17	0.03803
-GO:0007492	endoderm development	44	10	5.43	0.03822
-GO:0032069	regulation of nuclease activity	16	5	1.97	0.03843
-GO:0002437	inflammatory response to antigenic stimu...	16	5	1.97	0.03843
-GO:0050434	positive regulation of viral transcripti...	16	5	1.97	0.03843
-GO:0045191	regulation of isotype switching	16	5	1.97	0.03843
-GO:2000036	regulation of stem cell population maint...	16	5	1.97	0.03843
-GO:0045823	positive regulation of heart contraction	16	5	1.97	0.03843
-GO:1902165	regulation of intrinsic apoptotic signal...	16	5	1.97	0.03843
-GO:0045892	negative regulation of DNA-templated tra...	532	94	65.61	0.03909
-GO:0031032	actomyosin structure organization	160	34	19.73	0.04004
-GO:0050684	regulation of mRNA processing	138	41	17.02	0.04016
-GO:0008608	attachment of spindle microtubules to ki...	27	7	3.33	0.04091
-GO:0019083	viral transcription	27	7	3.33	0.04091
-GO:0018992	germ-line sex determination	27	7	3.33	0.04091
-GO:0043297	apical junction assembly	63	13	7.77	0.04101
-GO:0045786	negative regulation of cell cycle	390	74	48.1	0.04149
-GO:0070091	glucagon secretion	3	2	0.37	0.04184
-GO:0070092	regulation of glucagon secretion	3	2	0.37	0.04184
-GO:1904751	positive regulation of protein localizat...	3	2	0.37	0.04184
-GO:1990737	response to manganese-induced endoplasmi...	3	2	0.37	0.04184
-GO:0035736	cell proliferation involved in compound ...	3	2	0.37	0.04184
-GO:1903027	regulation of opsonization	3	2	0.37	0.04184
-GO:1903028	positive regulation of opsonization	3	2	0.37	0.04184
-GO:0140066	peptidyl-lysine crotonylation	3	2	0.37	0.04184
-GO:1904582	positive regulation of intracellular mRN...	3	2	0.37	0.04184
-GO:0070481	nuclear-transcribed mRNA catabolic proce...	3	2	0.37	0.04184
-GO:1903348	positive regulation of bicellular tight ...	3	2	0.37	0.04184
-GO:0043379	memory T cell differentiation	3	2	0.37	0.04184
-GO:0070213	protein auto-ADP-ribosylation	3	2	0.37	0.04184
-GO:0061763	multivesicular body-lysosome fusion	3	2	0.37	0.04184
-GO:0019086	late viral transcription	3	2	0.37	0.04184
-GO:0061824	cytosolic ciliogenesis	3	2	0.37	0.04184
-GO:0010248	establishment or maintenance of transmem...	3	2	0.37	0.04184
-GO:0045105	intermediate filament polymerization or ...	3	2	0.37	0.04184
-GO:0045108	regulation of intermediate filament poly...	3	2	0.37	0.04184
-GO:0002710	negative regulation of T cell mediated i...	3	2	0.37	0.04184
-GO:0007214	gamma-aminobutyric acid signaling pathwa...	3	2	0.37	0.04184
-GO:1902038	positive regulation of hematopoietic ste...	3	2	0.37	0.04184
-GO:0042062	long-term strengthening of neuromuscular...	3	2	0.37	0.04184
-GO:0106119	negative regulation of sterol biosynthet...	3	2	0.37	0.04184
-GO:0014021	secondary neural tube formation	3	2	0.37	0.04184
-GO:0045856	positive regulation of pole plasm oskar ...	3	2	0.37	0.04184
-GO:0002674	negative regulation of acute inflammator...	3	2	0.37	0.04184
-GO:1902350	cellular response to chloroquine	3	2	0.37	0.04184
-GO:1902349	response to chloroquine	3	2	0.37	0.04184
-GO:0045541	negative regulation of cholesterol biosy...	3	2	0.37	0.04184
-GO:0090364	regulation of proteasome assembly	3	2	0.37	0.04184
-GO:0090367	negative regulation of mRNA modification	3	2	0.37	0.04184
-GO:0051037	regulation of transcription involved in ...	3	2	0.37	0.04184
-GO:0090206	negative regulation of cholesterol metab...	3	2	0.37	0.04184
-GO:0090713	immunological memory process	3	2	0.37	0.04184
-GO:0090715	immunological memory formation process	3	2	0.37	0.04184
-GO:1902877	positive regulation of embryonic pattern...	3	2	0.37	0.04184
-GO:0098961	dendritic transport of ribonucleoprotein...	3	2	0.37	0.04184
-GO:0098963	dendritic transport of messenger ribonuc...	3	2	0.37	0.04184
-GO:0098964	anterograde dendritic transport of messe...	3	2	0.37	0.04184
-GO:0035074	pupation	3	2	0.37	0.04184
-GO:0098968	neurotransmitter receptor transport post...	3	2	0.37	0.04184
-GO:1990009	retinal cell apoptotic process	3	2	0.37	0.04184
-GO:0098935	dendritic transport	3	2	0.37	0.04184
-GO:0098937	anterograde dendritic transport	3	2	0.37	0.04184
-GO:0097212	lysosomal membrane organization	3	2	0.37	0.04184
-GO:0042660	positive regulation of cell fate specifi...	3	2	0.37	0.04184
-GO:0035360	positive regulation of peroxisome prolif...	3	2	0.37	0.04184
-GO:1990481	mRNA pseudouridine synthesis	3	2	0.37	0.04184
-GO:0044843	cell cycle G1/S phase transition	209	43	25.78	0.04391
-GO:1903201	regulation of oxidative stress-induced c...	45	10	5.55	0.04393
-GO:0007080	mitotic metaphase plate congression	39	9	4.81	0.04396
-GO:0010824	regulation of centrosome duplication	39	9	4.81	0.04396
-GO:0002822	regulation of adaptive immune response b...	39	9	4.81	0.04396
-GO:0042770	signal transduction in response to DNA d...	157	27	19.36	0.04414
-GO:0032205	negative regulation of telomere maintena...	41	13	5.06	0.04417
-GO:1901407	regulation of phosphorylation of RNA pol...	7	3	0.86	0.04462
-GO:0061086	negative regulation of histone H3-K27 me...	7	3	0.86	0.04462
-GO:0032071	regulation of endodeoxyribonuclease acti...	7	3	0.86	0.04462
-GO:1903003	positive regulation of protein deubiquit...	7	3	0.86	0.04462
-GO:1903436	regulation of mitotic cytokinetic proces...	7	3	0.86	0.04462
-GO:0021548	pons development	7	3	0.86	0.04462
-GO:1903564	regulation of protein localization to ci...	7	3	0.86	0.04462
-GO:1903566	positive regulation of protein localizat...	7	3	0.86	0.04462
-GO:0045822	negative regulation of heart contraction	7	3	0.86	0.04462
-GO:0042331	phototaxis	7	3	0.86	0.04462
-GO:1902459	positive regulation of stem cell populat...	7	3	0.86	0.04462
-GO:0051012	microtubule sliding	7	3	0.86	0.04462
-GO:1902177	positive regulation of oxidative stress-...	7	3	0.86	0.04462
-GO:2000629	negative regulation of miRNA metabolic p...	7	3	0.86	0.04462
-GO:0007000	nucleolus organization	22	6	2.71	0.04536
-GO:0045190	isotype switching	22	6	2.71	0.04536
-GO:0002204	somatic recombination of immunoglobulin ...	22	6	2.71	0.04536
-GO:0002208	somatic diversification of immunoglobuli...	22	6	2.71	0.04536
-GO:1905881	positive regulation of oogenesis	22	6	2.71	0.04536
-GO:0010389	regulation of G2/M transition of mitotic...	130	23	16.03	0.04554
-GO:0048580	regulation of post-embryonic development	90	17	11.1	0.04640
-GO:0007623	circadian rhythm	151	26	18.62	0.04699
-GO:0031330	negative regulation of cellular cataboli...	165	28	20.35	0.04745
-GO:0035082	axoneme assembly	97	18	11.96	0.04802
-GO:0031000	response to caffeine	17	5	2.1	0.04910
-GO:0030953	astral microtubule organization	17	5	2.1	0.04910
-GO:0032954	regulation of cytokinetic process	17	5	2.1	0.04910
-GO:0036270	response to diuretic	17	5	2.1	0.04910
-GO:0048738	cardiac muscle tissue development	104	19	12.83	0.04939
-GO:0016441	post-transcriptional gene silencing	104	19	12.83	0.04939
-GO:0045935	positive regulation of nucleobase-contai...	964	151	118.89	0.04941
-GO:0019080	viral gene expression	46	10	5.67	0.05019
-GO:0016071	mRNA metabolic process	632	144	77.94	0.05029
-GO:0000723	telomere maintenance	141	32	17.39	0.05041
-GO:0016973	poly(A)+ mRNA export from nucleus	12	4	1.48	0.05044
-GO:0021846	cell proliferation in forebrain	12	4	1.48	0.05044
-GO:0032780	negative regulation of ATP-dependent act...	12	4	1.48	0.05044
-GO:0048867	stem cell fate determination	12	4	1.48	0.05044
-GO:0045571	negative regulation of imaginal disc gro...	12	4	1.48	0.05044
-GO:0097050	type B pancreatic cell apoptotic process	12	4	1.48	0.05044
-GO:0006346	DNA methylation-dependent heterochromati...	12	4	1.48	0.05044
-GO:2000781	positive regulation of double-strand bre...	12	4	1.48	0.05044
-GO:1904491	protein localization to ciliary transiti...	12	4	1.48	0.05044
-GO:0044346	fibroblast apoptotic process	12	4	1.48	0.05044
-GO:0031670	cellular response to nutrient	34	8	4.19	0.05052
-GO:0040014	regulation of multicellular organism gro...	111	20	13.69	0.05053
-GO:0060419	heart growth	40	9	4.93	0.05077
-GO:0019079	viral genome replication	59	12	7.28	0.05334
-GO:0097711	ciliary basal body-plasma membrane docki...	85	16	10.48	0.05369
-GO:0044839	cell cycle G2/M phase transition	174	29	21.46	0.05400
-GO:0008156	negative regulation of DNA replication	32	11	3.95	0.05403
-GO:1901992	positive regulation of mitotic cell cycl...	81	20	9.99	0.05454
-GO:0044782	cilium organization	384	58	47.36	0.05473
-GO:0051654	establishment of mitochondrion localizat...	23	6	2.84	0.05521
-GO:0061064	negative regulation of nematode larval d...	23	6	2.84	0.05521
-GO:0002381	immunoglobulin production involved in im...	23	6	2.84	0.05521
-GO:1903203	regulation of oxidative stress-induced n...	23	6	2.84	0.05521
-GO:0045570	regulation of imaginal disc growth	23	6	2.84	0.05521
-GO:0036475	neuron death in response to oxidative st...	23	6	2.84	0.05521
-GO:1902101	positive regulation of metaphase/anaphas...	23	6	2.84	0.05521
-GO:0051985	negative regulation of chromosome segreg...	53	11	6.54	0.05532
-GO:0033045	regulation of sister chromatid segregati...	118	26	14.55	0.05683
-GO:1900407	regulation of cellular response to oxida...	47	10	5.8	0.05702
-GO:0035196	miRNA processing	29	7	3.58	0.05796
-GO:0016447	somatic recombination of immunoglobulin ...	29	7	3.58	0.05796
-GO:0051642	centrosome localization	41	9	5.06	0.05825
-GO:0016233	telomere capping	41	9	5.06	0.05825
-GO:0055017	cardiac muscle tissue growth	35	8	4.32	0.05871
-GO:0010586	miRNA metabolic process	35	8	4.32	0.05871
-GO:0006270	DNA replication initiation	35	8	4.32	0.05871
-GO:0006402	mRNA catabolic process	247	39	30.46	0.05960
-GO:0031100	animal organ regeneration	73	14	9	0.05980
-GO:0006275	regulation of DNA replication	89	20	10.98	0.05992
-GO:0007379	segment specification	18	5	2.22	0.06133
-GO:0140747	regulation of ncRNA transcription	18	5	2.22	0.06133
-GO:0052472	modulation by host of symbiont transcrip...	18	5	2.22	0.06133
-GO:0045144	meiotic sister chromatid segregation	18	5	2.22	0.06133
-GO:0045842	positive regulation of mitotic metaphase...	18	5	2.22	0.06133
-GO:0043921	modulation by host of viral transcriptio...	18	5	2.22	0.06133
-GO:0043922	negative regulation by host of viral tra...	18	5	2.22	0.06133
-GO:0016321	female meiosis chromosome segregation	18	5	2.22	0.06133
-GO:0016556	mRNA modification	18	5	2.22	0.06133
+GO:0000398	mRNA splicing, via spliceosome	341	94	42.17	2.6e-11
+GO:0010564	regulation of cell cycle process	604	133	74.69	2.7e-07
+GO:0006334	nucleosome assembly	34	16	4.2	6.5e-07
+GO:0071103	DNA conformation change	180	52	22.26	1.0e-06
+GO:0010628	positive regulation of gene expression	1041	175	128.73	3.4e-05
+GO:0031503	protein-containing complex localization	250	53	30.91	4.0e-05
+GO:0034968	histone lysine methylation	81	23	10.02	7.9e-05
+GO:0006611	protein export from nucleus	195	43	24.11	8.4e-05
+GO:0006260	DNA replication	228	54	28.19	9.4e-05
+GO:0051383	kinetochore organization	18	9	2.23	0.00011
+GO:0071166	ribonucleoprotein complex localization	145	37	17.93	0.00014
+GO:0000122	negative regulation of transcription by ...	386	72	47.73	0.00016
+GO:0031124	mRNA 3'-end processing	105	35	12.98	0.00018
+GO:0000381	regulation of alternative mRNA splicing,...	80	22	9.89	0.00019
+GO:0000083	regulation of transcription involved in ...	19	9	2.35	0.00019
+GO:0006974	DNA damage response	567	101	70.11	0.00023
+GO:0051984	positive regulation of chromosome segreg...	41	17	5.07	0.00026
+GO:0032508	DNA duplex unwinding	66	19	8.16	0.00027
+GO:0006406	mRNA export from nucleus	115	31	14.22	0.00027
+GO:0070828	heterochromatin organization	56	17	6.92	0.00028
+GO:0001178	regulation of transcriptional start site...	13	7	1.61	0.00038
+GO:0006364	rRNA processing	196	46	24.24	0.00042
+GO:0019827	stem cell population maintenance	148	33	18.3	0.00045
+GO:0000463	maturation of LSU-rRNA from tricistronic...	10	6	1.24	0.00047
+GO:0072718	response to cisplatin	7	5	0.87	0.00048
+GO:0007221	positive regulation of transcription of ...	18	8	2.23	0.00074
+GO:0046621	negative regulation of organ growth	41	13	5.07	0.00091
+GO:0010032	meiotic chromosome condensation	11	6	1.36	0.00093
+GO:1904749	regulation of protein localization to nu...	5	4	0.62	0.00105
+GO:0010793	regulation of mRNA export from nucleus	5	4	0.62	0.00105
+GO:0032968	positive regulation of transcription elo...	19	8	2.35	0.00114
+GO:0031440	regulation of mRNA 3'-end processing	45	17	5.56	0.00121
+GO:0051101	regulation of DNA binding	74	19	9.15	0.00127
+GO:0007088	regulation of mitotic nuclear division	170	35	21.02	0.00141
+GO:0040029	epigenetic regulation of gene expression	234	52	28.94	0.00143
+GO:1902255	positive regulation of intrinsic apoptot...	12	6	1.48	0.00167
+GO:0045814	negative regulation of gene expression, ...	99	23	12.24	0.00179
+GO:1900087	positive regulation of G1/S transition o...	34	11	4.2	0.00186
+GO:1901894	regulation of ATPase-coupled calcium tra...	3	3	0.37	0.00188
+GO:0061436	establishment of skin barrier	3	3	0.37	0.00188
+GO:0048866	stem cell fate specification	3	3	0.37	0.00188
+GO:0071163	DNA replication preinitiation complex as...	3	3	0.37	0.00188
+GO:0062033	positive regulation of mitotic sister ch...	25	9	3.09	0.00208
+GO:0000184	nuclear-transcribed mRNA catabolic proce...	106	24	13.11	0.00209
+GO:0051253	negative regulation of RNA metabolic pro...	613	119	75.8	0.00213
+GO:0007064	mitotic sister chromatid cohesion	34	13	4.2	0.00226
+GO:0043217	myelin maintenance	9	5	1.11	0.00234
+GO:0032876	negative regulation of DNA endoreduplica...	9	5	1.11	0.00234
+GO:0045876	positive regulation of sister chromatid ...	9	5	1.11	0.00234
+GO:0071318	cellular response to ATP	9	5	1.11	0.00234
+GO:0070198	protein localization to chromosome, telo...	21	8	2.6	0.00244
+GO:0051657	maintenance of organelle location	17	7	2.1	0.00272
+GO:0040010	positive regulation of growth rate	17	7	2.1	0.00272
+GO:1900364	negative regulation of mRNA polyadenylat...	17	7	2.1	0.00272
+GO:1990709	presynaptic active zone organization	13	6	1.61	0.00278
+GO:0051276	chromosome organization	881	176	108.94	0.00280
+GO:0007076	mitotic chromosome condensation	26	9	3.22	0.00284
+GO:0051302	regulation of cell division	133	28	16.45	0.00293
+GO:0000226	microtubule cytoskeleton organization	591	99	73.08	0.00294
+GO:0006413	translational initiation	171	34	21.15	0.00301
+GO:0040028	regulation of vulval development	41	12	5.07	0.00304
+GO:0006310	DNA recombination	180	35	22.26	0.00386
+GO:0000027	ribosomal large subunit assembly	32	10	3.96	0.00395
+GO:0009303	rRNA transcription	32	10	3.96	0.00395
+GO:0110020	regulation of actomyosin structure organ...	64	16	7.91	0.00399
+GO:0034728	nucleosome organization	77	28	9.52	0.00410
+GO:1904776	regulation of protein localization to ce...	10	5	1.24	0.00421
+GO:2001032	regulation of double-strand break repair...	10	5	1.24	0.00421
+GO:1901796	regulation of signal transduction by p53...	106	27	13.11	0.00425
+GO:1901989	positive regulation of cell cycle phase ...	99	27	12.24	0.00429
+GO:0033044	regulation of chromosome organization	356	76	44.02	0.00467
+GO:0046940	nucleoside monophosphate phosphorylation	23	8	2.84	0.00469
+GO:1902275	regulation of chromatin organization	176	34	21.76	0.00486
+GO:0031060	regulation of histone methylation	60	15	7.42	0.00523
+GO:0009451	RNA modification	114	24	14.1	0.00565
+GO:1901673	regulation of mitotic spindle assembly	19	7	2.35	0.00565
+GO:0032211	negative regulation of telomere maintena...	19	7	2.35	0.00565
+GO:0031570	DNA integrity checkpoint signaling	133	27	16.45	0.00581
+GO:0072332	intrinsic apoptotic signaling pathway by...	51	17	6.31	0.00583
+GO:0051053	negative regulation of DNA metabolic pro...	107	30	13.23	0.00596
+GO:0051029	rRNA transport	7	4	0.87	0.00596
+GO:0045727	positive regulation of translation	109	23	13.48	0.00647
+GO:0048025	negative regulation of mRNA splicing, vi...	29	9	3.59	0.00648
+GO:0040016	embryonic cleavage	15	6	1.85	0.00653
+GO:0032786	positive regulation of DNA-templated tra...	23	11	2.84	0.00669
+GO:1904908	negative regulation of maintenance of mi...	4	3	0.49	0.00684
+GO:0048254	snoRNA localization	4	3	0.49	0.00684
+GO:0045617	negative regulation of keratinocyte diff...	4	3	0.49	0.00684
+GO:0140013	meiotic nuclear division	240	43	29.68	0.00698
+GO:0006366	transcription by RNA polymerase II	1014	175	125.39	0.00722
+GO:0010629	negative regulation of gene expression	1103	182	136.4	0.00743
+GO:0045893	positive regulation of DNA-templated tra...	685	117	84.71	0.00789
+GO:0051100	negative regulation of binding	117	24	14.47	0.00789
+GO:0051972	regulation of telomerase activity	35	10	4.33	0.00797
+GO:1904358	positive regulation of telomere maintena...	35	10	4.33	0.00797
+GO:0000466	maturation of 5.8S rRNA from tricistroni...	25	8	3.09	0.00827
+GO:0120192	tight junction assembly	52	13	6.43	0.00904
+GO:2000059	negative regulation of ubiquitin-depende...	41	11	5.07	0.00914
+GO:0072520	seminiferous tubule development	16	6	1.98	0.00937
+GO:0060282	positive regulation of oocyte developmen...	16	6	1.98	0.00937
+GO:0045840	positive regulation of mitotic nuclear d...	47	12	5.81	0.01003
+GO:0051099	positive regulation of binding	126	25	15.58	0.01042
+GO:0002026	regulation of the force of heart contrac...	21	7	2.6	0.01046
+GO:1905508	protein localization to microtubule orga...	21	7	2.6	0.01046
+GO:0071539	protein localization to centrosome	21	7	2.6	0.01046
+GO:0019991	septate junction assembly	26	8	3.22	0.01068
+GO:0014017	neuroblast fate commitment	12	5	1.48	0.01070
+GO:0097064	ncRNA export from nucleus	12	5	1.48	0.01070
+GO:0051315	attachment of mitotic spindle microtubul...	12	5	1.48	0.01070
+GO:0045932	negative regulation of muscle contractio...	12	5	1.48	0.01070
+GO:0060287	epithelial cilium movement involved in d...	12	5	1.48	0.01070
+GO:0034770	histone H4-K20 methylation	8	4	0.99	0.01077
+GO:0006398	mRNA 3'-end processing by stem-loop bind...	8	4	0.99	0.01077
+GO:0051497	negative regulation of stress fiber asse...	8	4	0.99	0.01077
+GO:0046425	regulation of receptor signaling pathway...	65	15	8.04	0.01133
+GO:1904892	regulation of receptor signaling pathway...	65	15	8.04	0.01133
+GO:0030261	chromosome condensation	68	19	8.41	0.01148
+GO:0044786	cell cycle DNA replication	72	22	8.9	0.01195
+GO:0035019	somatic stem cell population maintenance	37	10	4.58	0.01204
+GO:1902679	negative regulation of RNA biosynthetic ...	545	101	67.39	0.01217
+GO:0032212	positive regulation of telomere maintena...	32	9	3.96	0.01293
+GO:0042771	intrinsic apoptotic signaling pathway in...	32	9	3.96	0.01293
+GO:1904580	regulation of intracellular mRNA localiz...	17	6	2.1	0.01300
+GO:0007317	regulation of pole plasm oskar mRNA loca...	17	6	2.1	0.01300
+GO:0140718	facultative heterochromatin formation	17	6	2.1	0.01300
+GO:0010837	regulation of keratinocyte proliferation	17	6	2.1	0.01300
+GO:1902875	regulation of embryonic pattern specific...	17	6	2.1	0.01300
+GO:0097696	receptor signaling pathway via STAT	72	16	8.9	0.01308
+GO:0007259	receptor signaling pathway via JAK-STAT	72	16	8.9	0.01308
+GO:0043331	response to dsRNA	43	11	5.32	0.01323
+GO:0045815	transcription initiation-coupled chromat...	43	11	5.32	0.01323
+GO:1903047	mitotic cell cycle process	730	132	90.27	0.01328
+GO:0044770	cell cycle phase transition	500	94	61.83	0.01357
+GO:0008334	histone mRNA metabolic process	27	8	3.34	0.01358
+GO:0045943	positive regulation of transcription by ...	22	7	2.72	0.01374
+GO:2001233	regulation of apoptotic signaling pathwa...	215	42	26.59	0.01378
+GO:0044772	mitotic cell cycle phase transition	425	77	52.55	0.01438
+GO:0002562	somatic diversification of immune recept...	38	10	4.7	0.01458
+GO:0032465	regulation of cytokinesis	73	16	9.03	0.01489
+GO:0031100	animal organ regeneration	73	16	9.03	0.01489
+GO:0070507	regulation of microtubule cytoskeleton o...	176	36	21.76	0.01505
+GO:0060633	negative regulation of transcription ini...	2	2	0.25	0.01527
+GO:1904750	negative regulation of protein localizat...	2	2	0.25	0.01527
+GO:1901896	positive regulation of ATPase-coupled ca...	2	2	0.25	0.01527
+GO:0070318	positive regulation of G0 to G1 transiti...	2	2	0.25	0.01527
+GO:1901692	regulation of compound eye retinal cell ...	2	2	0.25	0.01527
+GO:1901693	negative regulation of compound eye reti...	2	2	0.25	0.01527
+GO:0045065	cytotoxic T cell differentiation	2	2	0.25	0.01527
+GO:0000481	maturation of 5S rRNA	2	2	0.25	0.01527
+GO:0017055	negative regulation of RNA polymerase II...	2	2	0.25	0.01527
+GO:0021886	hypothalamus gonadotrophin-releasing hor...	2	2	0.25	0.01527
+GO:0021888	hypothalamus gonadotrophin-releasing hor...	2	2	0.25	0.01527
+GO:1903279	regulation of calcium:sodium antiporter ...	2	2	0.25	0.01527
+GO:0021979	hypothalamus cell differentiation	2	2	0.25	0.01527
+GO:0014018	neuroblast fate specification	2	2	0.25	0.01527
+GO:0034428	nuclear-transcribed mRNA catabolic proce...	2	2	0.25	0.01527
+GO:1905833	negative regulation of microtubule nucle...	2	2	0.25	0.01527
+GO:0010607	negative regulation of cytoplasmic mRNA ...	2	2	0.25	0.01527
+GO:0045583	regulation of cytotoxic T cell different...	2	2	0.25	0.01527
+GO:0045585	positive regulation of cytotoxic T cell ...	2	2	0.25	0.01527
+GO:0060087	relaxation of vascular associated smooth...	2	2	0.25	0.01527
+GO:1902423	regulation of attachment of mitotic spin...	2	2	0.25	0.01527
+GO:1902425	positive regulation of attachment of mit...	2	2	0.25	0.01527
+GO:0034729	histone H3-K79 methylation	2	2	0.25	0.01527
+GO:0043972	histone H3-K23 acetylation	2	2	0.25	0.01527
+GO:0010938	cytoplasmic microtubule depolymerization	2	2	0.25	0.01527
+GO:2000143	negative regulation of DNA-templated tra...	2	2	0.25	0.01527
+GO:0097332	response to antipsychotic drug	2	2	0.25	0.01527
+GO:1990010	compound eye retinal cell apoptotic proc...	2	2	0.25	0.01527
+GO:0001842	neural fold formation	2	2	0.25	0.01527
+GO:0035321	maintenance of imaginal disc-derived win...	2	2	0.25	0.01527
+GO:1904742	regulation of telomeric DNA binding	5	3	0.62	0.01553
+GO:1990845	adaptive thermogenesis	5	3	0.62	0.01553
+GO:0051987	positive regulation of attachment of spi...	5	3	0.62	0.01553
+GO:0021747	cochlear nucleus development	5	3	0.62	0.01553
+GO:1904975	response to bleomycin	5	3	0.62	0.01553
+GO:1904976	cellular response to bleomycin	5	3	0.62	0.01553
+GO:0032287	peripheral nervous system myelin mainten...	5	3	0.62	0.01553
+GO:0072719	cellular response to cisplatin	5	3	0.62	0.01553
+GO:0005991	trehalose metabolic process	5	3	0.62	0.01553
+GO:0007512	adult heart development	5	3	0.62	0.01553
+GO:2000270	negative regulation of fibroblast apopto...	5	3	0.62	0.01553
+GO:0045988	negative regulation of striated muscle c...	5	3	0.62	0.01553
+GO:0035041	sperm DNA decondensation	5	3	0.62	0.01553
+GO:0000012	single strand break repair	13	5	1.61	0.01565
+GO:0007527	adult somatic muscle development	13	5	1.61	0.01565
+GO:0051257	meiotic spindle midzone assembly	13	5	1.61	0.01565
+GO:1904355	positive regulation of telomere capping	13	5	1.61	0.01565
+GO:0006261	DNA-templated DNA replication	150	34	18.55	0.01575
+GO:0046427	positive regulation of receptor signalin...	28	8	3.46	0.01700
+GO:1904894	positive regulation of receptor signalin...	28	8	3.46	0.01700
+GO:0072698	protein localization to microtubule cyto...	28	8	3.46	0.01700
+GO:0044380	protein localization to cytoskeleton	28	8	3.46	0.01700
+GO:0032206	positive regulation of telomere maintena...	44	14	5.44	0.01705
+GO:0042023	DNA endoreduplication	27	11	3.34	0.01709
+GO:0032200	telomere organization	143	34	17.68	0.01748
+GO:0034341	response to type II interferon	39	10	4.82	0.01750
+GO:0007632	visual behavior	39	10	4.82	0.01750
+GO:0006378	mRNA polyadenylation	39	10	4.82	0.01750
+GO:0000076	DNA replication checkpoint signaling	18	6	2.23	0.01751
+GO:0034508	centromere complex assembly	18	6	2.23	0.01751
+GO:0051255	spindle midzone assembly	18	6	2.23	0.01751
+GO:0035865	cellular response to potassium ion	9	4	1.11	0.01751
+GO:0007400	neuroblast fate determination	9	4	1.11	0.01751
+GO:0040022	feminization of hermaphroditic germ-line	9	4	1.11	0.01751
+GO:0048857	neural nucleus development	9	4	1.11	0.01751
+GO:2000269	regulation of fibroblast apoptotic proce...	9	4	1.11	0.01751
+GO:0051382	kinetochore assembly	9	4	1.11	0.01751
+GO:1904424	regulation of GTP binding	9	4	1.11	0.01751
+GO:0006281	DNA repair	371	63	45.88	0.01772
+GO:2001252	positive regulation of chromosome organi...	174	44	21.52	0.01805
+GO:0031330	negative regulation of cellular cataboli...	165	30	20.4	0.01816
+GO:0006613	cotranslational protein targeting to mem...	87	18	10.76	0.01821
+GO:0006325	chromatin organization	568	122	70.24	0.01862
+GO:0010948	negative regulation of cell cycle proces...	293	62	36.23	0.01900
+GO:0007614	short-term memory	34	9	4.2	0.01931
+GO:0060420	regulation of heart growth	34	9	4.2	0.01931
+GO:0006357	regulation of transcription by RNA polym...	929	161	114.88	0.01948
+GO:2000573	positive regulation of DNA biosynthetic ...	57	13	7.05	0.01951
+GO:0055021	regulation of cardiac muscle tissue grow...	29	8	3.59	0.02101
+GO:0070316	regulation of G0 to G1 transition	29	8	3.59	0.02101
+GO:0051973	positive regulation of telomerase activi...	29	8	3.59	0.02101
+GO:0010501	RNA secondary structure unwinding	46	11	5.69	0.02177
+GO:0040027	negative regulation of vulval developmen...	14	5	1.73	0.02192
+GO:0000819	sister chromatid segregation	260	57	32.15	0.02233
+GO:0045724	positive regulation of cilium assembly	24	7	2.97	0.02239
+GO:1904353	regulation of telomere capping	24	7	2.97	0.02239
+GO:0000479	endonucleolytic cleavage of tricistronic...	19	6	2.35	0.02298
+GO:0043616	keratinocyte proliferation	19	6	2.35	0.02298
+GO:0051225	spindle assembly	148	31	18.3	0.02350
+GO:0016444	somatic cell DNA recombination	41	10	5.07	0.02461
+GO:0007346	regulation of mitotic cell cycle	531	95	65.66	0.02475
+GO:0043462	regulation of ATP-dependent activity	56	15	6.92	0.02502
+GO:0008283	cell population proliferation	1831	250	226.42	0.02556
+GO:0006356	regulation of transcription by RNA polym...	30	8	3.71	0.02565
+GO:0045448	mitotic cell cycle, embryonic	53	12	6.55	0.02565
+GO:0032075	positive regulation of nuclease activity	10	4	1.24	0.02638
+GO:0099558	maintenance of synapse structure	10	4	1.24	0.02638
+GO:1990700	nucleolar chromatin organization	10	4	1.24	0.02638
+GO:0051988	regulation of attachment of spindle micr...	10	4	1.24	0.02638
+GO:0032232	negative regulation of actin filament bu...	10	4	1.24	0.02638
+GO:1901977	negative regulation of cell cycle checkp...	10	4	1.24	0.02638
+GO:0036098	male germ-line stem cell population main...	10	4	1.24	0.02638
+GO:0090085	regulation of protein deubiquitination	10	4	1.24	0.02638
+GO:0006265	DNA topological change	10	4	1.24	0.02638
+GO:0060760	positive regulation of response to cytok...	10	4	1.24	0.02638
+GO:0090650	cellular response to oxygen-glucose depr...	10	4	1.24	0.02638
+GO:0090649	response to oxygen-glucose deprivation	10	4	1.24	0.02638
+GO:1902850	microtubule cytoskeleton organization in...	211	40	26.09	0.02716
+GO:0045132	meiotic chromosome segregation	130	24	16.08	0.02736
+GO:0045944	positive regulation of transcription by ...	529	90	65.42	0.02760
+GO:0007004	telomere maintenance via telomerase	61	17	7.54	0.02775
+GO:0006278	RNA-templated DNA biosynthetic process	61	17	7.54	0.02775
+GO:0007052	mitotic spindle organization	150	31	18.55	0.02783
+GO:0007277	pole cell development	25	7	3.09	0.02788
+GO:1902570	protein localization to nucleolus	11	7	1.36	0.02789
+GO:1902749	regulation of cell cycle G2/M phase tran...	137	25	16.94	0.02813
+GO:0046784	viral mRNA export from host cell nucleus	6	3	0.74	0.02823
+GO:1901534	positive regulation of hematopoietic pro...	6	3	0.74	0.02823
+GO:1905097	regulation of guanyl-nucleotide exchange...	6	3	0.74	0.02823
+GO:1905098	negative regulation of guanyl-nucleotide...	6	3	0.74	0.02823
+GO:0007079	mitotic chromosome movement towards spin...	6	3	0.74	0.02823
+GO:0010452	histone H3-K36 methylation	6	3	0.74	0.02823
+GO:0002781	antifungal peptide production	6	3	0.74	0.02823
+GO:0002788	regulation of antifungal peptide product...	6	3	0.74	0.02823
+GO:0048790	maintenance of presynaptic active zone s...	6	3	0.74	0.02823
+GO:0048789	cytoskeletal matrix organization at acti...	6	3	0.74	0.02823
+GO:0002804	positive regulation of antifungal peptid...	6	3	0.74	0.02823
+GO:2000371	regulation of DNA topoisomerase (ATP-hyd...	6	3	0.74	0.02823
+GO:2000373	positive regulation of DNA topoisomerase...	6	3	0.74	0.02823
+GO:0042464	dosage compensation by hypoactivation of...	6	3	0.74	0.02823
+GO:0022027	interkinetic nuclear migration	6	3	0.74	0.02823
+GO:1902167	positive regulation of intrinsic apoptot...	6	3	0.74	0.02823
+GO:0006407	rRNA export from nucleus	6	3	0.74	0.02823
+GO:0035039	male pronucleus assembly	6	3	0.74	0.02823
+GO:0044417	translocation of molecules into host	6	3	0.74	0.02823
+GO:0048863	stem cell differentiation	134	27	16.57	0.02865
+GO:2001234	negative regulation of apoptotic signali...	124	23	15.33	0.02888
+GO:0000018	regulation of DNA recombination	60	13	7.42	0.02912
+GO:0051785	positive regulation of nuclear division	60	13	7.42	0.02912
+GO:0007051	spindle organization	240	44	29.68	0.02924
+GO:0098781	ncRNA transcription	105	25	12.98	0.02928
+GO:1902017	regulation of cilium assembly	54	12	6.68	0.02941
+GO:2000736	regulation of stem cell differentiation	54	12	6.68	0.02941
+GO:0055008	cardiac muscle tissue morphogenesis	20	6	2.47	0.02949
+GO:0014016	neuroblast differentiation	20	6	2.47	0.02949
+GO:0000278	mitotic cell cycle	872	148	107.83	0.02958
+GO:0051661	maintenance of centrosome location	15	5	1.85	0.02962
+GO:0060043	regulation of cardiac muscle cell prolif...	15	5	1.85	0.02962
+GO:0032210	regulation of telomere maintenance via t...	50	15	6.18	0.02993
+GO:0034660	ncRNA metabolic process	483	96	59.73	0.03046
+GO:0071824	protein-DNA complex organization	629	131	77.78	0.03048
+GO:0045023	G0 to G1 transition	31	8	3.83	0.03095
+GO:0043392	negative regulation of DNA binding	31	8	3.83	0.03095
+GO:0032922	circadian regulation of gene expression	31	8	3.83	0.03095
+GO:0031111	negative regulation of microtubule polym...	31	8	3.83	0.03095
+GO:0071236	cellular response to antibiotic	99	19	12.24	0.03243
+GO:0071346	cellular response to type II interferon	37	9	4.58	0.03272
+GO:0140694	non-membrane-bounded organelle assembly	362	66	44.76	0.03279
+GO:0051781	positive regulation of cell division	61	13	7.54	0.03298
+GO:0002200	somatic diversification of immune recept...	43	10	5.32	0.03358
+GO:0051492	regulation of stress fiber assembly	43	10	5.32	0.03358
+GO:0000070	mitotic sister chromatid segregation	224	51	27.7	0.03360
+GO:0043414	macromolecule methylation	201	46	24.86	0.03361
+GO:0000077	DNA damage checkpoint signaling	126	23	15.58	0.03413
+GO:0001578	microtubule bundle formation	126	23	15.58	0.03413
+GO:0006277	DNA amplification	26	7	3.22	0.03421
+GO:0035264	multicellular organism growth	174	30	21.52	0.03529
+GO:0051052	regulation of DNA metabolic process	293	64	36.23	0.03585
+GO:0090169	regulation of spindle assembly	30	11	3.71	0.03672
+GO:0000154	rRNA modification	32	8	3.96	0.03695
+GO:0097120	receptor localization to synapse	21	6	2.6	0.03711
+GO:0061062	regulation of nematode larval developmen...	81	16	10.02	0.03723
+GO:0055022	negative regulation of cardiac muscle ti...	11	4	1.36	0.03748
+GO:0061117	negative regulation of heart growth	11	4	1.36	0.03748
+GO:0072711	cellular response to hydroxyurea	11	4	1.36	0.03748
+GO:0090075	relaxation of muscle	11	4	1.36	0.03748
+GO:0043558	regulation of translational initiation i...	11	4	1.36	0.03748
+GO:0010603	regulation of cytoplasmic mRNA processin...	11	4	1.36	0.03748
+GO:0043923	positive regulation by host of viral tra...	11	4	1.36	0.03748
+GO:0032259	methylation	216	48	26.71	0.03803
+GO:1990928	response to amino acid starvation	38	9	4.7	0.03835
+GO:0031062	positive regulation of histone methylati...	38	9	4.7	0.03835
+GO:0045892	negative regulation of DNA-templated tra...	532	97	65.79	0.03849
+GO:0001510	RNA methylation	50	11	6.18	0.03868
+GO:0032069	regulation of nuclease activity	16	5	1.98	0.03883
+GO:0002437	inflammatory response to antigenic stimu...	16	5	1.98	0.03883
+GO:0050434	positive regulation of viral transcripti...	16	5	1.98	0.03883
+GO:0045191	regulation of isotype switching	16	5	1.98	0.03883
+GO:2000036	regulation of stem cell population maint...	16	5	1.98	0.03883
+GO:0045823	positive regulation of heart contraction	16	5	1.98	0.03883
+GO:1902165	regulation of intrinsic apoptotic signal...	16	5	1.98	0.03883
+GO:0007492	endoderm development	44	10	5.44	0.03883
+GO:0010558	negative regulation of macromolecule bio...	1164	194	143.94	0.03913
+GO:0070925	organelle assembly	787	122	97.32	0.03944
+GO:0050684	regulation of mRNA processing	138	41	17.06	0.04064
+GO:0031032	actomyosin structure organization	160	34	19.79	0.04098
+GO:0072599	establishment of protein localization to...	95	18	11.75	0.04106
+GO:0008608	attachment of spindle microtubules to ki...	27	7	3.34	0.04143
+GO:0019083	viral transcription	27	7	3.34	0.04143
+GO:0018992	germ-line sex determination	27	7	3.34	0.04143
+GO:0043297	apical junction assembly	63	13	7.79	0.04178
+GO:0070091	glucagon secretion	3	2	0.37	0.04205
+GO:0070092	regulation of glucagon secretion	3	2	0.37	0.04205
+GO:1904751	positive regulation of protein localizat...	3	2	0.37	0.04205
+GO:1990737	response to manganese-induced endoplasmi...	3	2	0.37	0.04205
+GO:0035736	cell proliferation involved in compound ...	3	2	0.37	0.04205
+GO:1903027	regulation of opsonization	3	2	0.37	0.04205
+GO:1903028	positive regulation of opsonization	3	2	0.37	0.04205
+GO:0140066	peptidyl-lysine crotonylation	3	2	0.37	0.04205
+GO:1904582	positive regulation of intracellular mRN...	3	2	0.37	0.04205
+GO:0070481	nuclear-transcribed mRNA catabolic proce...	3	2	0.37	0.04205
+GO:0032495	response to muramyl dipeptide	3	2	0.37	0.04205
+GO:1903348	positive regulation of bicellular tight ...	3	2	0.37	0.04205
+GO:0043379	memory T cell differentiation	3	2	0.37	0.04205
+GO:0070213	protein auto-ADP-ribosylation	3	2	0.37	0.04205
+GO:0061763	multivesicular body-lysosome fusion	3	2	0.37	0.04205
+GO:0019086	late viral transcription	3	2	0.37	0.04205
+GO:0061824	cytosolic ciliogenesis	3	2	0.37	0.04205
+GO:0010248	establishment or maintenance of transmem...	3	2	0.37	0.04205
+GO:0045105	intermediate filament polymerization or ...	3	2	0.37	0.04205
+GO:0045108	regulation of intermediate filament poly...	3	2	0.37	0.04205
+GO:0002710	negative regulation of T cell mediated i...	3	2	0.37	0.04205
+GO:0007214	gamma-aminobutyric acid signaling pathwa...	3	2	0.37	0.04205
+GO:1902038	positive regulation of hematopoietic ste...	3	2	0.37	0.04205
+GO:0042062	long-term strengthening of neuromuscular...	3	2	0.37	0.04205
+GO:0106119	negative regulation of sterol biosynthet...	3	2	0.37	0.04205
+GO:0014021	secondary neural tube formation	3	2	0.37	0.04205
+GO:0045856	positive regulation of pole plasm oskar ...	3	2	0.37	0.04205
+GO:0002674	negative regulation of acute inflammator...	3	2	0.37	0.04205
+GO:1902350	cellular response to chloroquine	3	2	0.37	0.04205
+GO:1902349	response to chloroquine	3	2	0.37	0.04205
+GO:0045541	negative regulation of cholesterol biosy...	3	2	0.37	0.04205
+GO:0090364	regulation of proteasome assembly	3	2	0.37	0.04205
+GO:0090367	negative regulation of mRNA modification	3	2	0.37	0.04205
+GO:0051037	regulation of transcription involved in ...	3	2	0.37	0.04205
+GO:0090206	negative regulation of cholesterol metab...	3	2	0.37	0.04205
+GO:0090713	immunological memory process	3	2	0.37	0.04205
+GO:0090715	immunological memory formation process	3	2	0.37	0.04205
+GO:1902877	positive regulation of embryonic pattern...	3	2	0.37	0.04205
+GO:0098961	dendritic transport of ribonucleoprotein...	3	2	0.37	0.04205
+GO:0098963	dendritic transport of messenger ribonuc...	3	2	0.37	0.04205
+GO:0098964	anterograde dendritic transport of messe...	3	2	0.37	0.04205
+GO:0035074	pupation	3	2	0.37	0.04205
+GO:0098968	neurotransmitter receptor transport post...	3	2	0.37	0.04205
+GO:1990009	retinal cell apoptotic process	3	2	0.37	0.04205
+GO:0098935	dendritic transport	3	2	0.37	0.04205
+GO:0098937	anterograde dendritic transport	3	2	0.37	0.04205
+GO:0097212	lysosomal membrane organization	3	2	0.37	0.04205
+GO:0042660	positive regulation of cell fate specifi...	3	2	0.37	0.04205
+GO:0035360	positive regulation of peroxisome prolif...	3	2	0.37	0.04205
+GO:1990481	mRNA pseudouridine synthesis	3	2	0.37	0.04205
+GO:0045786	negative regulation of cell cycle	390	74	48.23	0.04306
+GO:0043489	RNA stabilization	33	8	4.08	0.04370
+GO:0031507	heterochromatin formation	33	8	4.08	0.04370
+GO:0044843	cell cycle G1/S phase transition	209	44	25.84	0.04455
+GO:0007080	mitotic metaphase chromosome alignment	39	9	4.82	0.04461
+GO:0010824	regulation of centrosome duplication	39	9	4.82	0.04461
+GO:0002822	regulation of adaptive immune response b...	39	9	4.82	0.04461
+GO:0032205	negative regulation of telomere maintena...	41	13	5.07	0.04468
+GO:0061086	negative regulation of histone H3-K27 me...	7	3	0.87	0.04493
+GO:0032071	regulation of endodeoxyribonuclease acti...	7	3	0.87	0.04493
+GO:1903003	positive regulation of protein deubiquit...	7	3	0.87	0.04493
+GO:1903436	regulation of mitotic cytokinetic proces...	7	3	0.87	0.04493
+GO:0021548	pons development	7	3	0.87	0.04493
+GO:1903564	regulation of protein localization to ci...	7	3	0.87	0.04493
+GO:1903566	positive regulation of protein localizat...	7	3	0.87	0.04493
+GO:0045822	negative regulation of heart contraction	7	3	0.87	0.04493
+GO:0042331	phototaxis	7	3	0.87	0.04493
+GO:1902459	positive regulation of stem cell populat...	7	3	0.87	0.04493
+GO:0051012	microtubule sliding	7	3	0.87	0.04493
+GO:1902177	positive regulation of oxidative stress-...	7	3	0.87	0.04493
+GO:2000629	negative regulation of miRNA metabolic p...	7	3	0.87	0.04493
+GO:0042770	signal transduction in response to DNA d...	157	27	19.41	0.04541
+GO:0007000	nucleolus organization	22	6	2.72	0.04587
+GO:0045190	isotype switching	22	6	2.72	0.04587
+GO:0002204	somatic recombination of immunoglobulin ...	22	6	2.72	0.04587
+GO:0002208	somatic diversification of immunoglobuli...	22	6	2.72	0.04587
+GO:1905881	positive regulation of oogenesis	22	6	2.72	0.04587
+GO:0010389	regulation of G2/M transition of mitotic...	130	23	16.08	0.04673
+GO:0045047	protein targeting to ER	90	17	11.13	0.04740
+GO:0048580	regulation of post-embryonic development	90	17	11.13	0.04740
+GO:0048511	rhythmic process	193	32	23.87	0.04897
+GO:0035082	axoneme assembly	97	18	11.99	0.04909
+GO:0140747	regulation of ncRNA transcription	28	7	3.46	0.04957
+GO:0031000	response to caffeine	17	5	2.1	0.04959
+GO:0030953	astral microtubule organization	17	5	2.1	0.04959
+GO:0032954	regulation of cytokinetic process	17	5	2.1	0.04959
+GO:0036270	response to diuretic	17	5	2.1	0.04959
+GO:0007507	heart development	366	56	45.26	0.04962
+GO:0048738	cardiac muscle tissue development	104	19	12.86	0.05052
+GO:0016441	post-transcriptional gene silencing	104	19	12.86	0.05052
+GO:0016973	poly(A)+ mRNA export from nucleus	12	4	1.48	0.05087
+GO:0070417	cellular response to cold	12	4	1.48	0.05087
+GO:0032780	negative regulation of ATP-dependent act...	12	4	1.48	0.05087
+GO:0048867	stem cell fate determination	12	4	1.48	0.05087
+GO:0045571	negative regulation of imaginal disc gro...	12	4	1.48	0.05087
+GO:0097050	type B pancreatic cell apoptotic process	12	4	1.48	0.05087
+GO:0006346	DNA methylation-dependent heterochromati...	12	4	1.48	0.05087
+GO:2000781	positive regulation of double-strand bre...	12	4	1.48	0.05087
+GO:0044346	fibroblast apoptotic process	12	4	1.48	0.05087
+GO:0019080	viral gene expression	46	10	5.69	0.05097
+GO:1903524	positive regulation of blood circulation	34	8	4.2	0.05120
+GO:1902369	negative regulation of RNA catabolic pro...	34	8	4.2	0.05120
+GO:0031670	cellular response to nutrient	34	8	4.2	0.05120
+GO:0060419	heart growth	40	9	4.95	0.05151
+GO:0000723	telomere maintenance	141	32	17.44	0.05151
+GO:0050792	regulation of viral process	91	17	11.25	0.05188
+GO:0042274	ribosomal small subunit biogenesis	91	17	11.25	0.05188
+GO:0008156	negative regulation of DNA replication	32	11	3.96	0.05463
+GO:1901992	positive regulation of mitotic cell cycl...	81	21	10.02	0.05496
+GO:1903312	negative regulation of mRNA metabolic pr...	75	23	9.27	0.05507
+GO:0044839	cell cycle G2/M phase transition	174	29	21.52	0.05557
+GO:0051654	establishment of mitochondrion localizat...	23	6	2.84	0.05582
+GO:0061064	negative regulation of nematode larval d...	23	6	2.84	0.05582
+GO:0002381	immunoglobulin production involved in im...	23	6	2.84	0.05582
+GO:0045570	regulation of imaginal disc growth	23	6	2.84	0.05582
+GO:1902101	positive regulation of metaphase/anaphas...	23	6	2.84	0.05582
+GO:0051985	negative regulation of chromosome segreg...	53	11	6.55	0.05622
+GO:0000462	maturation of SSU-rRNA from tricistronic...	53	11	6.55	0.05622
+GO:1900407	regulation of cellular response to oxida...	47	10	5.81	0.05789
+GO:0033045	regulation of sister chromatid segregati...	118	26	14.59	0.05804
+GO:0035196	miRNA processing	29	7	3.59	0.05866
+GO:0016064	immunoglobulin mediated immune response	29	7	3.59	0.05866
+GO:0019724	B cell mediated immunity	29	7	3.59	0.05866
+GO:0016447	somatic recombination of immunoglobulin ...	29	7	3.59	0.05866
+GO:0051642	centrosome localization	41	9	5.07	0.05907
+GO:0016233	telomere capping	41	9	5.07	0.05907
+GO:0140014	mitotic nuclear division	300	63	37.1	0.05943
+GO:0055017	cardiac muscle tissue growth	35	8	4.33	0.05949
+GO:0010586	miRNA metabolic process	35	8	4.33	0.05949
+GO:0034198	cellular response to amino acid starvati...	35	8	4.33	0.05949
+GO:0006270	DNA replication initiation	35	8	4.33	0.05949
+GO:0007018	microtubule-based movement	341	52	42.17	0.05993
+GO:0048524	positive regulation of viral process	60	12	7.42	0.06054
+GO:0006275	regulation of DNA replication	89	20	11.01	0.06108
+GO:0007379	segment specification	18	5	2.23	0.06192
+GO:0052472	modulation by host of symbiont transcrip...	18	5	2.23	0.06192
+GO:0045144	meiotic sister chromatid segregation	18	5	2.23	0.06192
+GO:0045842	positive regulation of mitotic metaphase...	18	5	2.23	0.06192
+GO:0043921	modulation by host of viral transcriptio...	18	5	2.23	0.06192
+GO:0043922	negative regulation by host of viral tra...	18	5	2.23	0.06192
+GO:0016321	female meiosis chromosome segregation	18	5	2.23	0.06192
+GO:0016556	mRNA modification	18	5	2.23	0.06192
+GO:0030038	contractile actin filament bundle assemb...	54	11	6.68	0.06308
+GO:0043149	stress fiber assembly	54	11	6.68	0.06308
+GO:0071897	DNA biosynthetic process	170	35	21.02	0.06452
+GO:0032886	regulation of microtubule-based process	211	38	26.09	0.06528
+GO:1902882	regulation of response to oxidative stre...	48	10	5.94	0.06539
+GO:0001975	response to amphetamine	8	3	0.99	0.06543
+GO:1904778	positive regulation of protein localizat...	8	3	0.99	0.06543
+GO:0060965	negative regulation of miRNA-mediated ge...	8	3	0.99	0.06543
+GO:0002175	protein localization to paranode region ...	8	3	0.99	0.06543
+GO:0010894	negative regulation of steroid biosynthe...	8	3	0.99	0.06543
+GO:0009453	energy taxis	8	3	0.99	0.06543
+GO:0045760	positive regulation of action potential	8	3	0.99	0.06543
+GO:2000002	negative regulation of DNA damage checkp...	8	3	0.99	0.06543
+GO:0043615	astrocyte cell migration	8	3	0.99	0.06543
+GO:0009786	regulation of asymmetric cell division	8	3	0.99	0.06543
+GO:1902412	regulation of mitotic cytokinesis	8	3	0.99	0.06543
