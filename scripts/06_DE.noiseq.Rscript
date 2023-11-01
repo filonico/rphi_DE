@@ -78,7 +78,7 @@ rphi_tmm <- Biobase::assayData(rphi_filtered_eset)$exprs %>%
 
 # write to file the table of features kept for DE analysis (useful for GO enrichment)
 write.table(data.frame("genes" = rownames(rphi_tmm), rphi_tmm),
-            file = "normalized_read_counts.tsv", quote = FALSE, sep = "\t", row.names = FALSE)
+            file = "05_DE/normalized_read_counts.tsv", quote = FALSE, sep = "\t", row.names = FALSE)
 
 # define a function to perform DE
 perform_DE_analysis <- function(data, prefix) {

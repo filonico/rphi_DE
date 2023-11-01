@@ -63,8 +63,10 @@ bash scripts/05_merge_rawmappings.sh
 # create a directory to store input and output files of DE analysis
 mkdir 05_DE/
 
+mv conditions.tsv 05_DE/
+
 # execute Rscript for DE analysis
-Rscript scripts/06_DE.noiseq.Rscript 04_mappings/ALL.rawmapping.stats.tsv 00_input_files/tech_replicates.tsv
+Rscript scripts/06_DE.noiseq.Rscript 04_mappings/ALL.rawmapping.stats.tsv 05_DE/conditions.tsv
 
 
 #########################
