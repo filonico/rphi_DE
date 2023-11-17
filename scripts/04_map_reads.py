@@ -13,13 +13,11 @@
 # The script creates an output directory structured as follow:
 # ./
 # └── your_output_dir/
-#     ├── SRRXXXXXX1.mapped.bam
-#     ├── SRRXXXXXX1.mapped.log
-#     ├── SRRXXXXXX2.mapped.bam
-#     ├── SRRXXXXXX2.mapped.log
-#     ...
-#     ├── SRRXXXXXXN.mapped.bam
-#     └── SRRXXXXXXN.mapped.log
+#     ├── AccNo.mapped.bam
+#     ├── AccNo.mapped.log
+#     ├── AccNo.mapped.sorted.filtered.bam
+#     ├── AccNo.mapped.sorted.filtered.bam.bai
+#     └── AccNo.rawmapping.stats.tsv
 #
 #
 # Written by:   Filippo Nicolini
